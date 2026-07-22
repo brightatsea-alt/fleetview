@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-22T04:53:44Z",
-  "source": "sample",
+  "generatedAt": "2026-07-22T08:15:15.763Z",
+  "source": "aisstream.io",
   "count": 12,
   "vessels": [
     {
@@ -30,7 +30,7 @@
       "name": "MV STAVANGER SKY",
       "lat": 35.1,
       "lon": 129.04,
-      "sog": 0.0,
+      "sog": 0,
       "cog": 0,
       "destination": "KRPUS Busan",
       "eta": "—",
@@ -39,8 +39,8 @@
     {
       "mmsi": 257812003,
       "name": "MV TROMSO SPIRIT",
-      "lat": 15.0,
-      "lon": 120.0,
+      "lat": 15,
+      "lon": 120,
       "sog": 14.5,
       "cog": 250,
       "destination": "SGSIN Singapore",
@@ -105,8 +105,8 @@
     {
       "mmsi": 257812009,
       "name": "MV HAUGESUND STAR",
-      "lat": 1.0,
-      "lon": 104.0,
+      "lat": 1,
+      "lon": 104,
       "sog": 13.9,
       "cog": 300,
       "destination": "THLCH Laem Chabang",
@@ -116,9 +116,9 @@
     {
       "mmsi": 257812010,
       "name": "MV MOLDE ENDEAVOUR",
-      "lat": 12.0,
-      "lon": 44.0,
-      "sog": 16.0,
+      "lat": 12,
+      "lon": 44,
+      "sog": 16,
       "cog": 120,
       "destination": "INNSA Nhava Sheva",
       "eta": "07-28 09:00",
