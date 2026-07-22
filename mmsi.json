@@ -1,9 +1,233 @@
 {
-  "_comment": "관리 선대 목록. mmsi 는 필수. name/destination/eta 는 선택(수집 데이터가 있으면 자동 갱신됨). 여기에 실제 60척을 채우세요.",
+  "_comment": "WSMK 관리 선대. Master Data(Vessel MMSI 정보.XLSX) 기준. MMSI 미기재 선박은 _pending_mmsi 참조.",
+  "_pending_mmsi": [
+    {
+      "name": "Morning Cello",
+      "imo": 9329461,
+      "type": "PCTC"
+    },
+    {
+      "name": "Morning Champion",
+      "imo": 9285627,
+      "type": "PCTC"
+    },
+    {
+      "name": "Berge Daisen",
+      "imo": 9675652,
+      "type": "BULK"
+    },
+    {
+      "name": "Liberty King",
+      "imo": 9203291,
+      "type": "PCTC"
+    },
+    {
+      "name": "Morning Crown",
+      "imo": 9285641,
+      "type": "PCTC"
+    },
+    {
+      "name": "Cape Emerald",
+      "imo": 9624263,
+      "type": "BULK"
+    },
+    {
+      "name": "Morning Courier",
+      "imo": 9285639,
+      "type": "PCTC"
+    },
+    {
+      "name": "Morning Calm",
+      "imo": 9285615,
+      "type": "PCTC"
+    }
+  ],
   "vessels": [
-    { "mmsi": 257812000, "name": "MV OSLO CARRIER" },
-    { "mmsi": 257812001, "name": "MV BERGEN ACE" },
-    { "mmsi": 257812002, "name": "MV STAVANGER SKY" },
-    { "mmsi": 257812003, "name": "MV TROMSO SPIRIT" }
+    {
+      "mmsi": 440114000,
+      "name": "Asian Empire",
+      "imo": 9176606,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538005333,
+      "name": "Morning Chant",
+      "imo": 9663300,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 441947000,
+      "name": "Asian Majesty",
+      "imo": 9203576,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 636018238,
+      "name": "Morning Cornet",
+      "imo": 9329473,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 311000685,
+      "name": "Morning Carol",
+      "imo": 9336086,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 356473000,
+      "name": "Morning Lady",
+      "imo": 9445980,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538005521,
+      "name": "Morning Pilot",
+      "imo": 9669031,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 372914000,
+      "name": "Morning Conductor",
+      "imo": 9336050,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538005232,
+      "name": "Morning Capo",
+      "imo": 9663295,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538005452,
+      "name": "Morning Post",
+      "imo": 9669029,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 440058000,
+      "name": "Asian Dynasty",
+      "imo": 9203588,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 441722000,
+      "name": "Asian Emperor",
+      "imo": 9176632,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 352960000,
+      "name": "Morning Lena",
+      "imo": 9446001,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 441093000,
+      "name": "Morning Chorus",
+      "imo": 9312834,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 440253000,
+      "name": "Morning Menad",
+      "imo": 9318515,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 372627000,
+      "name": "Morning Lily",
+      "imo": 9446013,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 235011580,
+      "name": "Morning Concert",
+      "imo": 9312822,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 356470000,
+      "name": "Morning Celesta",
+      "imo": 9336062,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 441995000,
+      "name": "Asian Trust",
+      "imo": 9203590,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 370967000,
+      "name": "Morning Lisa",
+      "imo": 9383417,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 440371000,
+      "name": "Asian Captain",
+      "imo": 9158616,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 371659000,
+      "name": "Morning Composer",
+      "imo": 9336074,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 351446000,
+      "name": "Morning Caroline",
+      "imo": 9338723,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 372802000,
+      "name": "Morning Lucy",
+      "imo": 9383431,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 370567000,
+      "name": "Morning Linda",
+      "imo": 9383106,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 370808000,
+      "name": "Morning Lynn",
+      "imo": 9383429,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 356732000,
+      "name": "Morning Laura",
+      "imo": 9445992,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538005617,
+      "name": "Morning Pride",
+      "imo": 9681431,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538007250,
+      "name": "Morning Prosperity",
+      "imo": 9780639,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 441992000,
+      "name": "Asian Vision",
+      "imo": 9122966,
+      "type": "PCTC"
+    },
+    {
+      "mmsi": 538007249,
+      "name": "Morning Peace",
+      "imo": 9780627,
+      "type": "PCTC"
+    }
   ]
 }
