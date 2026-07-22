@@ -1,0 +1,9 @@
+{
+  "_comment": "관리 선대 목록. mmsi 는 필수. name/destination/eta 는 선택(수집 데이터가 있으면 자동 갱신됨). 여기에 실제 60척을 채우세요.",
+  "vessels": [
+    { "mmsi": 257812000, "name": "MV OSLO CARRIER" },
+    { "mmsi": 257812001, "name": "MV BERGEN ACE" },
+    { "mmsi": 257812002, "name": "MV STAVANGER SKY" },
+    { "mmsi": 257812003, "name": "MV TROMSO SPIRIT" }
+  ]
+}
