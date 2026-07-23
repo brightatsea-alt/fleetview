@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T13:31:18.605Z",
+  "generatedAt": "2026-07-23T15:51:57.557Z",
   "source": "aisstream.io",
   "count": 3,
   "vessels": [
@@ -34,16 +34,16 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 51.82319833333334,
-      "lon": 3.2039933333333335,
-      "sog": 2,
-      "cog": 215.9,
-      "heading": 81,
+      "lat": 51.84520166666667,
+      "lon": 3.246481666666667,
+      "sog": 5.8,
+      "cog": 7.8,
+      "heading": 10,
       "destination": "BEANR               ",
       "eta": "7-23 08:00",
-      "timestamp": "2026-07-23 13:29:02.089573797 +0000 UTC",
+      "timestamp": "2026-07-23 15:51:14.115338013 +0000 UTC",
       "imo": 9669029,
-      "maxSog": 2
+      "maxSog": 5.8
     }
   ]
 }
