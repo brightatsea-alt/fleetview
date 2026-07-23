@@ -21,9 +21,20 @@
   .stat b{display:block;font-size:18px}.stat span{font-size:10px;color:var(--muted)}
   .stat.contact{background:rgba(37,208,125,.12);border-color:var(--contact)}.stat.contact b{color:var(--contact)}
   .stat.off b{color:var(--offhrs)}.stat.nopos b{color:var(--nopos)}
-  .toolbar{padding:8px 12px;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .toolbar{padding:8px 12px 6px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
   .toolbar input[type=text]{flex:1;min-width:140px;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:6px 8px;font-size:12px}
   .toolbar label{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
+  .filterbar{padding:0 12px 8px;border-bottom:1px solid var(--line)}
+  .filterbar button{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:7px 10px;font-size:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .filterbar #filterCount{color:var(--accent);font-size:11px}
+  .fpanel{border-bottom:1px solid var(--line);background:var(--panel2)}
+  .fp-actions{display:flex;gap:6px;padding:8px 12px 4px}
+  .fp-actions input{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:5px 8px;font-size:11px}
+  .fp-actions button{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer}
+  .fp-list{max-height:230px;overflow:auto;padding:4px 8px 10px}
+  .fp-item{display:flex;align-items:center;gap:8px;padding:4px 6px;font-size:12px;cursor:pointer;border-radius:4px}
+  .fp-item:hover{background:var(--panel)}.fp-item input{accent-color:var(--accent)}
+  .fp-item .fn{flex:1}.fp-item .fm{color:var(--muted);font-size:10px}
   .list{overflow:auto;flex:1}
   .row{padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;gap:10px;align-items:flex-start}
   .row:hover{background:var(--panel2)}.row.nopos{opacity:.62;cursor:default}
@@ -36,8 +47,7 @@
   .pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-top:3px}
   .pill.on{background:var(--contact);color:#04120a}.pill.off{background:transparent;border:1px solid var(--offhrs);color:var(--offhrs)}
   .pill.no{background:transparent;border:1px solid var(--nopos);color:var(--nopos)}
-  .badge{font-size:9px;padding:1px 5px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
-  .badge.ref{border-color:var(--ref);color:var(--ref)}
+  .badge{font-size:9px;padding:1px 5px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}.badge.ref{border-color:var(--ref);color:var(--ref)}
   .sechd{padding:6px 12px;font-size:10px;color:var(--muted);background:var(--panel2);border-bottom:1px solid var(--line)}
   footer{padding:8px 12px;font-size:10px;color:var(--muted);border-top:1px solid var(--line);line-height:1.6}
   .legend{position:absolute;z-index:500;right:10px;bottom:10px;background:rgba(16,31,48,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11px}
@@ -64,10 +74,15 @@
       <input id="search" type="text" placeholder="선명 / MMSI / IMO 검색" />
       <label><input type="checkbox" id="onlyContact" /> 연락가능만</label>
     </div>
+    <div class="filterbar"><button id="filterBtn">⚓ 선박 다중선택 <span id="filterCount">전체</span></button></div>
+    <div id="filterPanel" class="fpanel" hidden>
+      <div class="fp-actions"><input id="fpSearch" type="text" placeholder="필터 내 선박 찾기" /><button id="selAll">모두</button><button id="selNone">해제</button></div>
+      <div class="fp-list" id="fpList"></div>
+    </div>
     <div class="list" id="list"></div>
     <footer>
       <div id="updated">데이터 로딩 중…</div>
-      <div>우선순위 <b>실측 AIS</b> ▸ <b style="color:var(--ref)">참고(포털)</b> ▸ 위치대기. AIS 잡히면 자동 갱신·대권 DR 지속(속도=관측 최대, 최저 17kn).</div>
+      <div>우선순위 <b>실측 AIS</b> ▸ <b style="color:var(--ref)">참고(포털)</b> ▸ 위치대기. AIS 잡히면 자동 갱신·대권 DR 지속.</div>
     </footer>
   </div>
   <div id="map"></div>
@@ -84,7 +99,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
 const CONFIG={dataUrl:"data/fleet.json",refUrl:"data/reference.json",rosterUrl:"mmsi.json",refreshMs:30000,reloadMs:5*60*1000,liveHours:6,drHours:24,minSpeed:17,uncertaintyRatio:0.10,contactStart:9,contactEnd:18};
-
 const PORTS={
  KRPUS:[35.10,129.04],KRINC:[37.45,126.60],KRPTK:[36.96,126.82],KRULS:[35.50,129.38],KRKAN:[34.90,127.70],KRMAS:[35.20,128.58],
  JPNGO:[35.05,136.85],JPUKB:[34.68,135.20],JPYOK:[35.45,139.65],JPHIC:[36.39,140.62],JPMOJ:[33.95,130.96],JPOSA:[34.63,135.43],
@@ -120,22 +134,32 @@ const map=L.map('map',{worldCopyJump:true,zoomControl:true}).setView([20,60],3);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:12}).addTo(map);
 
 let FLEET=[], layers={};
+/* ---- 다중선택 필터 ---- */
+const SELECTED=new Set();
+function passSel(m){return SELECTED.size===0||SELECTED.has(m);}
+function updFilterCount(){document.getElementById('filterCount').textContent=SELECTED.size?SELECTED.size+'척 선택':'전체';}
+function buildFilter(){ if(buildFilter._done)return; buildFilter._done=true;
+  const box=document.getElementById('fpList');
+  const names=FLEET.slice().sort((a,b)=>a.name.localeCompare(b.name));
+  box.innerHTML=names.map(v=>'<label class="fp-item"><input type="checkbox" data-mmsi="'+v.mmsi+'"><span class="fn">'+v.name+'</span><span class="fm">'+v.mmsi+'</span></label>').join('');
+  box.addEventListener('change',e=>{const m=Number(e.target.getAttribute('data-mmsi'));if(!m)return;if(e.target.checked)SELECTED.add(m);else SELECTED.delete(m);updFilterCount();draw();});
+  document.getElementById('filterBtn').addEventListener('click',()=>{const p=document.getElementById('filterPanel');p.hidden=!p.hidden;});
+  document.getElementById('selNone').addEventListener('click',()=>{SELECTED.clear();document.querySelectorAll('#fpList input').forEach(x=>x.checked=false);updFilterCount();draw();});
+  document.getElementById('selAll').addEventListener('click',()=>{document.querySelectorAll('#fpList .fp-item').forEach(it=>{if(it.style.display!=='none'){const i=it.querySelector('input');i.checked=true;SELECTED.add(Number(i.getAttribute('data-mmsi')));}});updFilterCount();draw();});
+  document.getElementById('fpSearch').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('#fpList .fp-item').forEach(it=>{it.style.display=it.textContent.toLowerCase().includes(q)?'':'none';});});
+}
+
 function computeVessel(v){
   if(!v.hasPos){ return Object.assign({},v,{hasPos:false,st:"nopos",pos:null,est:false,mode:"—",spd:0,loc:{text:"—",hour:null,tz:"—"},contactable:false,uncNM:0,h:null}); }
-  if(v.source==="ref"){ // 포털 참고위치: 정적, DR 없음, 현지시간만 계산
-    const loc=localTimeAt(v.lon,new Date());
-    return Object.assign({},v,{hasPos:true,st:"ref",pos:[v.lat,v.lon],est:false,mode:"참고(포털)",spd:0,loc,
-      contactable:loc.hour>=CONFIG.contactStart&&loc.hour<CONFIG.contactEnd,uncNM:0,h:null});
-  }
+  if(v.source==="ref"){ const loc=localTimeAt(v.lon,new Date());
+    return Object.assign({},v,{hasPos:true,st:"ref",pos:[v.lat,v.lon],est:false,mode:"참고(포털)",spd:0,loc,contactable:loc.hour>=CONFIG.contactStart&&loc.hour<CONFIG.contactEnd,uncNM:0,h:null}); }
   const h=ageHours(v.timestamp), st=statusOf(h);
   const spd=Math.max(v.maxSog||v.sog||0, CONFIG.minSpeed);
   let pos=[v.lat,v.lon], est=false, mode="AIS", arrived=false;
-  if(st!=="live"){
-    const distNM=spd*h, dest=destCoord(v.destination);
+  if(st!=="live"){ const distNM=spd*h, dest=destCoord(v.destination);
     if(dest){ const total=distanceNM([v.lat,v.lon],dest); const f=total>0?Math.min(distNM/total,1):1;
       pos=(f>=1)?dest.slice():gcInterp([v.lat,v.lon],dest,f); arrived=(f>=1); mode="대권→목적지"; est=true;
-    }else{ pos=projectCOG(v.lat,v.lon,v.cog==null?0:v.cog,distNM); mode="COG 투영"; est=true; }
-  }
+    }else{ pos=projectCOG(v.lat,v.lon,v.cog==null?0:v.cog,distNM); mode="COG 투영"; est=true; } }
   const loc=localTimeAt(pos[1],new Date());
   const contactable=loc.hour>=CONFIG.contactStart && loc.hour<CONFIG.contactEnd;
   const uncNM=est?(arrived?3:Math.max(2,spd*h*CONFIG.uncertaintyRatio)):0;
@@ -144,6 +168,7 @@ function computeVessel(v){
 function draw(){
   let nContact=0,nOff=0,nEst=0,nNo=0; const rows=[];
   FLEET.map(computeVessel).forEach(c=>{
+    if(!passSel(c.mmsi)){ if(layers[c.mmsi])removeLayers(c.mmsi); return; }   // ← 다중선택 필터
     if(!c.hasPos){ nNo++; if(layers[c.mmsi])removeLayers(c.mmsi); rows.push(c); return; }
     if(c.contactable)nContact++; else nOff++;
     if(c.est)nEst++;
@@ -210,13 +235,11 @@ async function load(){
   const posBy={}; if(pos&&pos.vessels)pos.vessels.forEach(v=>posBy[v.mmsi]=v);
   const refBy={}; if(ref&&ref.vessels)ref.vessels.forEach(v=>refBy[v.mmsi]=v);
   let aisN=0,refN=0;
-  if(roster){
-    FLEET=roster.map(r=>{
-      if(posBy[r.mmsi]){aisN++;return Object.assign({},r,posBy[r.mmsi],{hasPos:true,source:"ais"});}
+  if(roster){ FLEET=roster.map(r=>{ if(posBy[r.mmsi]){aisN++;return Object.assign({},r,posBy[r.mmsi],{hasPos:true,source:"ais"});}
       if(refBy[r.mmsi]){refN++;return Object.assign({},r,refBy[r.mmsi],{hasPos:true,source:"ref"});}
-      return Object.assign({},r,{hasPos:false});
-    });
+      return Object.assign({},r,{hasPos:false}); });
   }else{ FLEET=SAMPLE.vessels.map(v=>Object.assign({},v,{hasPos:true,source:"ais"})); }
+  buildFilter();
   const total=FLEET.length, gen=pos?pos.generatedAt:null;
   document.getElementById('updated').innerHTML='기준 <b>'+(gen?new Date(gen).toLocaleString('ko-KR'):'샘플')+'</b> · 선대 '+total+'척 · <b style="color:var(--live)">AIS '+aisN+'</b> / <b style="color:var(--ref)">참고 '+refN+'</b> / 대기 '+(total-aisN-refN);
   draw();
