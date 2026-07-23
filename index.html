@@ -43,6 +43,7 @@
   .row .name{font-size:13px;font-weight:600}
   .row .meta{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.5}
   .rt{text-align:right;flex:0 0 auto}
+  .ltlbl{font-size:9px;color:var(--muted);font-weight:600;margin-right:5px;letter-spacing:.2px}
   .clock{font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;font-weight:600}.clock.dim{color:var(--nopos)}
   .pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-top:3px}
   .pill.on{background:var(--contact);color:#04120a}.pill.off{background:transparent;border:1px solid var(--offhrs);color:var(--offhrs)}
@@ -212,7 +213,7 @@ function rowHtml(c){
   return '<div class="row" onclick="focusVessel('+c.mmsi+')"><div class="dot '+c.st+'"></div><div style="flex:1"><div class="name">'+c.name+'</div>'
     +'<div class="meta">'+c.mmsi+' · '+STATUS_KO[c.st]+' · <span class="'+(c.est||c.st==="ref"?'est':'')+'">'+tag+'</span></div>'
     +'<div class="meta">→ '+(c.destination||'—')+'</div></div>'
-    +'<div class="rt"><div class="clock">'+c.loc.text+'</div><div class="meta">'+c.loc.tz+'</div>'
+    +'<div class="rt"><div class="clock"><span class="ltlbl">Vessel LT</span>'+c.loc.text+'</div><div class="meta">'+c.loc.tz+'</div>'
     +(c.contactable?'<span class="pill on">연락가능</span>':'<span class="pill off">시간외</span>')+'</div></div>';
 }
 function renderList(rows){
