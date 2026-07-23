@@ -49,6 +49,7 @@
   .pill.no{background:transparent;border:1px solid var(--nopos);color:var(--nopos)}
   .badge{font-size:9px;padding:1px 5px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}.badge.ref{border-color:var(--ref);color:var(--ref)}
   .sechd{padding:6px 12px;font-size:10px;color:var(--muted);background:var(--panel2);border-bottom:1px solid var(--line)}
+  .hint{padding:16px 14px;font-size:11px;color:var(--muted);line-height:1.7;background:var(--panel2);border-bottom:1px solid var(--line)}
   footer{padding:8px 12px;font-size:10px;color:var(--muted);border-top:1px solid var(--line);line-height:1.6}
   .legend{position:absolute;z-index:500;right:10px;bottom:10px;background:rgba(16,31,48,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11px}
   .legend div{display:flex;align-items:center;gap:6px;margin:2px 0}.legend .sw{width:10px;height:10px;border-radius:50%}
@@ -216,12 +217,14 @@ function rowHtml(c){
 }
 function renderList(rows){
   const q=(document.getElementById('search').value||'').toLowerCase(), only=document.getElementById('onlyContact').checked;
+  const active=SELECTED.size>0||q||only;
+  if(!active){ document.getElementById('list').innerHTML='<div class="hint">지도에 <b style="color:var(--text)">전체 선대</b> 표시 중.<br><br>위 <b style="color:var(--accent)">⚓ 선박 다중선택</b>을 눌러 선박을 고르면(중복 선택 가능) 지도·목록이 선택한 선박만으로 좁혀집니다.</div>'; return; }
   const f=rows.filter(c=>(!only||c.contactable)&&(!q||c.name.toLowerCase().includes(q)||String(c.mmsi).includes(q)||String(c.imo||'').includes(q)));
   const rank={live:0,dr:1,stale:2,ref:3};
   const pos=f.filter(c=>c.hasPos).sort((a,b)=>(b.contactable-a.contactable)||((rank[a.st]||0)-(rank[b.st]||0))||(a.loc.hour-b.loc.hour));
   const no=f.filter(c=>!c.hasPos).sort((a,b)=>a.name.localeCompare(b.name));
   let html=pos.map(rowHtml).join('');
-  if(no.length){ html+='<div class="sechd">위치 미수신 · 대기 '+no.length+'척 (AIS 연안 접근 시 자동 표시)</div>'+no.map(rowHtml).join(''); }
+  if(no.length){ html+='<div class="sechd">위치 미수신 · 대기 '+no.length+'척</div>'+no.map(rowHtml).join(''); }
   document.getElementById('list').innerHTML=html||'<div class="row"><div class="meta">해당 선박 없음</div></div>';
 }
 window.focusVessel=function(mmsi){const c=computeVessel(FLEET.find(v=>v.mmsi===mmsi));if(!c.hasPos)return;map.setView(c.pos,6,{animate:true});layers[mmsi].marker.openPopup();};
