@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 <style>
   :root{ --bg:#0b1622;--panel:#101f30;--panel2:#16283d;--line:#22384f;--text:#e8eef5;--muted:#8ca2b8;--accent:#3fb6ff;
-    --contact:#25d07d;--offhrs:#5b6b7d;--live:#25d07d;--dr:#f2b134;--stale:#ff6b6b;}
+    --contact:#25d07d;--offhrs:#5b6b7d;--live:#25d07d;--dr:#f2b134;--stale:#ff6b6b;--ref:#9d7bff;--nopos:#47566a;}
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;font-family:-apple-system,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--text)}
   #app{display:flex;height:100vh;overflow:hidden}
@@ -20,30 +20,31 @@
   .stat{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 4px;text-align:center}
   .stat b{display:block;font-size:18px}.stat span{font-size:10px;color:var(--muted)}
   .stat.contact{background:rgba(37,208,125,.12);border-color:var(--contact)}.stat.contact b{color:var(--contact)}
-  .stat.off b{color:var(--offhrs)}
+  .stat.off b{color:var(--offhrs)}.stat.nopos b{color:var(--nopos)}
   .toolbar{padding:8px 12px;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
   .toolbar input[type=text]{flex:1;min-width:140px;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:6px 8px;font-size:12px}
   .toolbar label{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
   .list{overflow:auto;flex:1}
   .row{padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;gap:10px;align-items:flex-start}
-  .row:hover{background:var(--panel2)}
+  .row:hover{background:var(--panel2)}.row.nopos{opacity:.62;cursor:default}
   .dot{width:9px;height:9px;border-radius:50%;margin-top:5px;flex:0 0 9px}
-  .dot.live{background:var(--live)}.dot.dr{background:var(--dr)}.dot.stale{background:var(--stale)}
+  .dot.live{background:var(--live)}.dot.dr{background:var(--dr)}.dot.stale{background:var(--stale)}.dot.ref{background:var(--ref)}.dot.nopos{background:var(--nopos)}
   .row .name{font-size:13px;font-weight:600}
   .row .meta{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.5}
   .rt{text-align:right;flex:0 0 auto}
-  .clock{font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;font-weight:600}
+  .clock{font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;font-weight:600}.clock.dim{color:var(--nopos)}
   .pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-top:3px}
   .pill.on{background:var(--contact);color:#04120a}.pill.off{background:transparent;border:1px solid var(--offhrs);color:var(--offhrs)}
+  .pill.no{background:transparent;border:1px solid var(--nopos);color:var(--nopos)}
   .badge{font-size:9px;padding:1px 5px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+  .badge.ref{border-color:var(--ref);color:var(--ref)}
+  .sechd{padding:6px 12px;font-size:10px;color:var(--muted);background:var(--panel2);border-bottom:1px solid var(--line)}
   footer{padding:8px 12px;font-size:10px;color:var(--muted);border-top:1px solid var(--line);line-height:1.6}
   .legend{position:absolute;z-index:500;right:10px;bottom:10px;background:rgba(16,31,48,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11px}
   .legend div{display:flex;align-items:center;gap:6px;margin:2px 0}.legend .sw{width:10px;height:10px;border-radius:50%}
-  .leaflet-popup-content-wrapper{background:var(--panel);color:var(--text);border:1px solid var(--line)}
-  .leaflet-popup-tip{background:var(--panel)}
+  .leaflet-popup-content-wrapper{background:var(--panel);color:var(--text);border:1px solid var(--line)}.leaflet-popup-tip{background:var(--panel)}
   .pop b{color:var(--accent)}.pop table{font-size:12px;border-collapse:collapse;margin-top:4px}
-  .pop td{padding:1px 6px 1px 0;color:var(--muted)}.pop td.v{color:var(--text)}
-  .est{color:var(--dr);font-size:11px}
+  .pop td{padding:1px 6px 1px 0;color:var(--muted)}.pop td.v{color:var(--text)}.est{color:var(--dr);font-size:11px}
 </style>
 </head>
 <body>
@@ -51,13 +52,13 @@
   <div id="sidebar">
     <header>
       <h1>&#9875; FleetView — WSM Korea</h1>
-      <div class="sub">현지시간 · 09:00~18:00 <b style="color:var(--contact)">연락가능</b> · 대권항해 추정(DR) 지속표기</div>
+      <div class="sub">관리 선대 전체 · 현지시간 09:00~18:00 <b style="color:var(--contact)">연락가능</b> · 대권 DR</div>
     </header>
     <div class="stats">
       <div class="stat contact"><b id="nContact">0</b><span>📞 연락가능</span></div>
       <div class="stat off"><b id="nOff">0</b><span>업무시간외</span></div>
-      <div class="stat live"><b id="nLive">0</b><span>실측&lt;6h</span></div>
       <div class="stat"><b id="nEst">0</b><span>DR추정</span></div>
+      <div class="stat nopos"><b id="nNo">0</b><span>위치대기</span></div>
     </div>
     <div class="toolbar">
       <input id="search" type="text" placeholder="선명 / MMSI / IMO 검색" />
@@ -66,23 +67,24 @@
     <div class="list" id="list"></div>
     <footer>
       <div id="updated">데이터 로딩 중…</div>
-      <div>AIS 미수신 시 마지막 위치에서 <b>대권항해</b>로 추정 지속. 속도=관측 최대(최저 17kn). 정확 위치 업무엔 사용 금지.</div>
+      <div>우선순위 <b>실측 AIS</b> ▸ <b style="color:var(--ref)">참고(포털)</b> ▸ 위치대기. AIS 잡히면 자동 갱신·대권 DR 지속(속도=관측 최대, 최저 17kn).</div>
     </footer>
   </div>
   <div id="map"></div>
   <div class="legend">
     <div><span class="sw" style="background:var(--contact)"></span> 연락가능 (09–18시 현지)</div>
-    <div><span class="sw" style="background:var(--live)"></span> 실측 (AIS &lt; 6h)</div>
+    <div><span class="sw" style="background:var(--live)"></span> 실측 AIS (&lt; 6h)</div>
     <div><span class="sw" style="background:var(--dr)"></span> DR 추정 (6–24h)</div>
     <div><span class="sw" style="background:var(--stale)"></span> DR 장기 (&gt; 24h)</div>
+    <div><span class="sw" style="background:var(--ref)"></span> 참고위치 (포털·근사)</div>
+    <div><span class="sw" style="background:var(--nopos)"></span> 위치 미수신</div>
   </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
-const CONFIG={dataUrl:"data/fleet.json",refreshMs:30000,reloadMs:5*60*1000,liveHours:6,drHours:24,minSpeed:17,uncertaintyRatio:0.10,contactStart:9,contactEnd:18};
+const CONFIG={dataUrl:"data/fleet.json",refUrl:"data/reference.json",rosterUrl:"mmsi.json",refreshMs:30000,reloadMs:5*60*1000,liveHours:6,drHours:24,minSpeed:17,uncertaintyRatio:0.10,contactStart:9,contactEnd:18};
 
-/* ---- 목적지 UN/LOCODE 좌표표 (car-carrier 주요 항구) ---- */
 const PORTS={
  KRPUS:[35.10,129.04],KRINC:[37.45,126.60],KRPTK:[36.96,126.82],KRULS:[35.50,129.38],KRKAN:[34.90,127.70],KRMAS:[35.20,128.58],
  JPNGO:[35.05,136.85],JPUKB:[34.68,135.20],JPYOK:[35.45,139.65],JPHIC:[36.39,140.62],JPMOJ:[33.95,130.96],JPOSA:[34.63,135.43],
@@ -98,157 +100,136 @@ const PORTS={
  AUSYD:[-33.86,151.21],AUMEL:[-37.84,144.92],AUBNE:[-27.38,153.17],AUFRE:[-32.05,115.74],NZAKL:[-36.84,174.77]
 };
 const ALIAS={SINGAPORE:"SGSIN",BUSAN:"KRPUS",PYEONGTAEK:"KRPTK",ULSAN:"KRULS",SHANGHAI:"CNSHA",ROTTERDAM:"NLRTM",ANTWERP:"BEANR",ZEEBRUGGE:"BEZEE",BREMERHAVEN:"DEBRV",SOUTHAMPTON:"GBSOU",BALTIMORE:"USBAL",BRUNSWICK:"USBRP",JEBELALI:"AEJEA",PORTKLANG:"MYPKG",LAEMCHABANG:"THLCH",DURBAN:"ZADUR",NHAVASHEVA:"INNSA"};
-function destCoord(dest){
-  if(!dest) return null;
-  const s=String(dest).toUpperCase().replace(/[^A-Z0-9]/g,'');
-  if(!s) return null;
-  if(PORTS[s.slice(0,5)]) return PORTS[s.slice(0,5)];
-  for(const k in PORTS){ if(s.indexOf(k)>=0) return PORTS[k]; }
-  for(const a in ALIAS){ if(s.indexOf(a)>=0) return PORTS[ALIAS[a]]; }
-  return null;
-}
+function destCoord(dest){ if(!dest)return null; const s=String(dest).toUpperCase().replace(/[^A-Z0-9]/g,''); if(!s)return null;
+  if(PORTS[s.slice(0,5)])return PORTS[s.slice(0,5)]; for(const k in PORTS){if(s.indexOf(k)>=0)return PORTS[k];} for(const a in ALIAS){if(s.indexOf(a)>=0)return PORTS[ALIAS[a]];} return null; }
 
-/* ---- 항법 계산 ---- */
 const R_NM=3440.065, toRad=d=>d*Math.PI/180, toDeg=r=>r*180/Math.PI;
-function distanceNM(a,b){
-  const p1=toRad(a[0]),p2=toRad(b[0]),dp=toRad(b[0]-a[0]),dl=toRad(b[1]-a[1]);
-  const x=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;
-  return 2*R_NM*Math.asin(Math.min(1,Math.sqrt(x)));
-}
-// 대권 경로상 fraction f 지점 (0=출발,1=목적지)
-function gcInterp(a,b,f){
-  const p1=toRad(a[0]),l1=toRad(a[1]),p2=toRad(b[0]),l2=toRad(b[1]);
-  const d=distanceNM(a,b)/R_NM; if(d===0) return a.slice();
-  const A=Math.sin((1-f)*d)/Math.sin(d), B=Math.sin(f*d)/Math.sin(d);
-  const x=A*Math.cos(p1)*Math.cos(l1)+B*Math.cos(p2)*Math.cos(l2);
-  const y=A*Math.cos(p1)*Math.sin(l1)+B*Math.cos(p2)*Math.sin(l2);
-  const z=A*Math.sin(p1)+B*Math.sin(p2);
-  return [toDeg(Math.atan2(z,Math.hypot(x,y))), toDeg(Math.atan2(y,x))];
-}
-// 대권 초기침로(목적지 없을 때 COG 대체용은 아님) — COG 직진 투영
-function projectCOG(lat,lon,cogDeg,distNM){
-  const d=distNM/R_NM, br=toRad(cogDeg), p1=toRad(lat), l1=toRad(lon);
-  const p2=Math.asin(Math.sin(p1)*Math.cos(d)+Math.cos(p1)*Math.sin(d)*Math.cos(br));
-  const l2=l1+Math.atan2(Math.sin(br)*Math.sin(d)*Math.cos(p1),Math.cos(d)-Math.sin(p1)*Math.sin(p2));
-  return [toDeg(p2), ((toDeg(l2)+540)%360)-180];
-}
+function distanceNM(a,b){const p1=toRad(a[0]),p2=toRad(b[0]),dp=toRad(b[0]-a[0]),dl=toRad(b[1]-a[1]);const x=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;return 2*R_NM*Math.asin(Math.min(1,Math.sqrt(x)));}
+function gcInterp(a,b,f){const p1=toRad(a[0]),l1=toRad(a[1]),p2=toRad(b[0]),l2=toRad(b[1]);const d=distanceNM(a,b)/R_NM;if(d===0)return a.slice();const A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d);const x=A*Math.cos(p1)*Math.cos(l1)+B*Math.cos(p2)*Math.cos(l2);const y=A*Math.cos(p1)*Math.sin(l1)+B*Math.cos(p2)*Math.sin(l2);const z=A*Math.sin(p1)+B*Math.sin(p2);return [toDeg(Math.atan2(z,Math.hypot(x,y))),toDeg(Math.atan2(y,x))];}
+function projectCOG(lat,lon,cogDeg,distNM){const d=distNM/R_NM,br=toRad(cogDeg),p1=toRad(lat),l1=toRad(lon);const p2=Math.asin(Math.sin(p1)*Math.cos(d)+Math.cos(p1)*Math.sin(d)*Math.cos(br));const l2=l1+Math.atan2(Math.sin(br)*Math.sin(d)*Math.cos(p1),Math.cos(d)-Math.sin(p1)*Math.sin(p2));return [toDeg(p2),((toDeg(l2)+540)%360)-180];}
 function nauticalTZ(lon){return Math.round(lon/15);}
-function localTimeAt(lon,date){
-  const tz=nauticalTZ(lon), utcMs=date.getTime()+date.getTimezoneOffset()*60000, loc=new Date(utcMs+tz*3600000);
-  const hh=String(loc.getHours()).padStart(2,"0"), mm=String(loc.getMinutes()).padStart(2,"0"), sign=tz>=0?"+":"−";
-  return {text:hh+":"+mm,hour:loc.getHours()+loc.getMinutes()/60,tz:"UTC"+sign+Math.abs(tz)};
-}
+function localTimeAt(lon,date){const tz=nauticalTZ(lon),utcMs=date.getTime()+date.getTimezoneOffset()*60000,loc=new Date(utcMs+tz*3600000);const hh=String(loc.getHours()).padStart(2,"0"),mm=String(loc.getMinutes()).padStart(2,"0"),sign=tz>=0?"+":"−";return {text:hh+":"+mm,hour:loc.getHours()+loc.getMinutes()/60,tz:"UTC"+sign+Math.abs(tz)};}
 function ageHours(iso){return (Date.now()-new Date(iso).getTime())/3600000;}
 function statusOf(h){return h<CONFIG.liveHours?"live":h<CONFIG.drHours?"dr":"stale";}
-const STATUS_KO={live:"실측",dr:"추정",stale:"장기추정"};
+const STATUS_KO={live:"실측",dr:"추정",stale:"장기추정",ref:"참고",nopos:"위치대기"};
 const cssVar=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-const STATUS_COLOR={live:cssVar('--live'),dr:cssVar('--dr'),stale:cssVar('--stale')};
+const STATUS_COLOR={live:cssVar('--live'),dr:cssVar('--dr'),stale:cssVar('--stale'),ref:cssVar('--ref')};
 const CONTACT_COLOR=cssVar('--contact');
 
-const map=L.map('map',{worldCopyJump:true,zoomControl:true}).setView([20,90],3);
+const map=L.map('map',{worldCopyJump:true,zoomControl:true}).setView([20,60],3);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:12}).addTo(map);
 
 let FLEET=[], layers={};
 function computeVessel(v){
+  if(!v.hasPos){ return Object.assign({},v,{hasPos:false,st:"nopos",pos:null,est:false,mode:"—",spd:0,loc:{text:"—",hour:null,tz:"—"},contactable:false,uncNM:0,h:null}); }
+  if(v.source==="ref"){ // 포털 참고위치: 정적, DR 없음, 현지시간만 계산
+    const loc=localTimeAt(v.lon,new Date());
+    return Object.assign({},v,{hasPos:true,st:"ref",pos:[v.lat,v.lon],est:false,mode:"참고(포털)",spd:0,loc,
+      contactable:loc.hour>=CONFIG.contactStart&&loc.hour<CONFIG.contactEnd,uncNM:0,h:null});
+  }
   const h=ageHours(v.timestamp), st=statusOf(h);
-  // 속도 = 관측된 최대속도, 낮으면 17kn 바닥
   const spd=Math.max(v.maxSog||v.sog||0, CONFIG.minSpeed);
   let pos=[v.lat,v.lon], est=false, mode="AIS", arrived=false;
   if(st!=="live"){
     const distNM=spd*h, dest=destCoord(v.destination);
-    if(dest){
-      const total=distanceNM([v.lat,v.lon],dest);
-      const f=total>0?Math.min(distNM/total,1):1;
-      pos=(f>=1)?dest.slice():gcInterp([v.lat,v.lon],dest,f);
-      arrived=(f>=1); mode="대권→목적지"; est=true;
-    }else{
-      pos=projectCOG(v.lat,v.lon,v.cog==null?0:v.cog,distNM); mode="COG 투영"; est=true;
-    }
+    if(dest){ const total=distanceNM([v.lat,v.lon],dest); const f=total>0?Math.min(distNM/total,1):1;
+      pos=(f>=1)?dest.slice():gcInterp([v.lat,v.lon],dest,f); arrived=(f>=1); mode="대권→목적지"; est=true;
+    }else{ pos=projectCOG(v.lat,v.lon,v.cog==null?0:v.cog,distNM); mode="COG 투영"; est=true; }
   }
   const loc=localTimeAt(pos[1],new Date());
   const contactable=loc.hour>=CONFIG.contactStart && loc.hour<CONFIG.contactEnd;
   const uncNM=est?(arrived?3:Math.max(2,spd*h*CONFIG.uncertaintyRatio)):0;
-  return Object.assign({},v,{h,st,pos,est,mode,arrived,spd,loc,contactable,uncNM});
+  return Object.assign({},v,{hasPos:true,h,st,pos,est,mode,arrived,spd,loc,contactable,uncNM});
 }
 function draw(){
-  let nContact=0,nOff=0,nLive=0,nEst=0; const rows=[];
+  let nContact=0,nOff=0,nEst=0,nNo=0; const rows=[];
   FLEET.map(computeVessel).forEach(c=>{
+    if(!c.hasPos){ nNo++; if(layers[c.mmsi])removeLayers(c.mmsi); rows.push(c); return; }
     if(c.contactable)nContact++; else nOff++;
-    if(c.st==="live")nLive++; if(c.est)nEst++;
+    if(c.est)nEst++;
     const col=STATUS_COLOR[c.st];
     let L1=layers[c.mmsi];
-    if(!L1){
-      const marker=L.circleMarker(c.pos,{radius:6,weight:2}).addTo(map);
+    if(!L1){ const marker=L.circleMarker(c.pos,{radius:6,weight:2}).addTo(map);
       const ring=L.circleMarker(c.pos,{radius:10,weight:2,fill:false,color:CONTACT_COLOR});
       const circle=L.circle(c.pos,{radius:0,color:col,weight:1,dashArray:"4 4",fill:false});
-      marker.on('click',()=>focusVessel(c.mmsi));
-      L1=layers[c.mmsi]={marker,ring,circle};
-    }
-    L1.marker.setLatLng(c.pos).setStyle({color:col,fillColor:col,fillOpacity:c.est?0.35:0.9});
+      marker.on('click',()=>focusVessel(c.mmsi)); L1=layers[c.mmsi]={marker,ring,circle}; }
+    L1.marker.setLatLng(c.pos).setStyle({color:col,fillColor:col,fillOpacity:(c.est||c.st==="ref")?0.4:0.9});
     L1.ring.setLatLng(c.pos);
     if(c.contactable){ if(!map.hasLayer(L1.ring))L1.ring.addTo(map);} else if(map.hasLayer(L1.ring))map.removeLayer(L1.ring);
-    if(c.uncNM>0){ L1.circle.setLatLng(c.pos).setRadius(c.uncNM*1852).setStyle({color:col}); if(!map.hasLayer(L1.circle))L1.circle.addTo(map);}
-    else if(map.hasLayer(L1.circle))map.removeLayer(L1.circle);
+    if(c.uncNM>0){ L1.circle.setLatLng(c.pos).setRadius(c.uncNM*1852).setStyle({color:col}); if(!map.hasLayer(L1.circle))L1.circle.addTo(map);} else if(map.hasLayer(L1.circle))map.removeLayer(L1.circle);
     L1.marker.bindPopup(popupHtml(c)); rows.push(c);
   });
   document.getElementById('nContact').textContent=nContact;
   document.getElementById('nOff').textContent=nOff;
-  document.getElementById('nLive').textContent=nLive;
   document.getElementById('nEst').textContent=nEst;
+  document.getElementById('nNo').textContent=nNo;
   renderList(rows);
 }
+function removeLayers(mmsi){const L1=layers[mmsi];if(!L1)return;[L1.marker,L1.ring,L1.circle].forEach(x=>{if(map.hasLayer(x))map.removeLayer(x);});delete layers[mmsi];}
 function popupHtml(c){
   const pill=c.contactable?'<span class="pill on">📞 연락가능</span>':'<span class="pill off">업무시간외</span>';
-  const drInfo=c.est?('<tr><td>DR 방식</td><td class="v">'+c.mode+' @ '+c.spd.toFixed(1)+'kn'+(c.arrived?' · 도착추정':'')+'</td></tr>'):'';
-  return '<div class="pop"><b>'+c.name+'</b> <span class="badge">'+STATUS_KO[c.st]+'</span> '+pill
-    +'<table>'
+  const bcls=c.st==="ref"?'badge ref':'badge';
+  const drInfo=c.est?('<tr><td>DR 방식</td><td class="v">'+c.mode+' @ '+c.spd.toFixed(1)+'kn'+(c.arrived?' · 도착추정':'')+'</td></tr>'):(c.st==="ref"?'<tr><td>출처</td><td class="v">포털 참고(근사) · AIS 수신 시 자동 대체</td></tr>':'');
+  const last=c.st==="ref"?'참고 스냅샷':(fmtAge(c.h)+' 전 (max '+((c.maxSog||c.sog||0)).toFixed(1)+'kn)');
+  return '<div class="pop"><b>'+c.name+'</b> <span class="'+bcls+'">'+STATUS_KO[c.st]+'</span> '+pill+'<table>'
     +'<tr><td>현지시각</td><td class="v"><b style="font-size:14px">'+c.loc.text+'</b> <span style="color:var(--muted)">'+c.loc.tz+'</span></td></tr>'
     +'<tr><td>MMSI / IMO</td><td class="v">'+c.mmsi+' / '+(c.imo||'—')+'</td></tr>'
-    +'<tr><td>위치</td><td class="v">'+fmtCoord(c.pos[0],'NS')+', '+fmtCoord(c.pos[1],'EW')+' '+(c.est?'<span class="est">(추정)</span>':'')+'</td></tr>'
-    +'<tr><td>목적지</td><td class="v">'+(c.destination||'—')+'</td></tr>'
-    +drInfo
-    +'<tr><td>마지막 AIS</td><td class="v">'+fmtAge(c.h)+' 전 (max '+((c.maxSog||c.sog||0)).toFixed(1)+'kn)</td></tr>'
-    +'</table></div>';
+    +'<tr><td>위치</td><td class="v">'+fmtCoord(c.pos[0],'NS')+', '+fmtCoord(c.pos[1],'EW')+' '+(c.est?'<span class="est">(추정)</span>':(c.st==="ref"?'<span class="est">(근사)</span>':''))+'</td></tr>'
+    +'<tr><td>목적지</td><td class="v">'+(c.destination||'—')+'</td></tr>'+drInfo
+    +'<tr><td>마지막 AIS</td><td class="v">'+last+'</td></tr></table></div>';
+}
+function rowHtml(c){
+  if(!c.hasPos){ return '<div class="row nopos"><div class="dot nopos"></div><div style="flex:1"><div class="name">'+c.name+'</div>'
+    +'<div class="meta">'+c.mmsi+' · IMO '+(c.imo||'—')+' · '+(c.type||'')+'</div><div class="meta">AIS 미수신 — 연안 접근 시 자동 표시</div></div>'
+    +'<div class="rt"><div class="clock dim">—</div><span class="pill no">위치대기</span></div></div>'; }
+  const tag=c.est?c.mode:(c.st==="ref"?'참고(포털)':'실측');
+  return '<div class="row" onclick="focusVessel('+c.mmsi+')"><div class="dot '+c.st+'"></div><div style="flex:1"><div class="name">'+c.name+'</div>'
+    +'<div class="meta">'+c.mmsi+' · '+STATUS_KO[c.st]+' · <span class="'+(c.est||c.st==="ref"?'est':'')+'">'+tag+'</span></div>'
+    +'<div class="meta">→ '+(c.destination||'—')+'</div></div>'
+    +'<div class="rt"><div class="clock">'+c.loc.text+'</div><div class="meta">'+c.loc.tz+'</div>'
+    +(c.contactable?'<span class="pill on">연락가능</span>':'<span class="pill off">시간외</span>')+'</div></div>';
 }
 function renderList(rows){
   const q=(document.getElementById('search').value||'').toLowerCase(), only=document.getElementById('onlyContact').checked;
-  rows.sort((a,b)=>(b.contactable-a.contactable)||(a.loc.hour-b.loc.hour));
-  const html=rows.filter(c=>(!only||c.contactable)&&(!q||c.name.toLowerCase().includes(q)||String(c.mmsi).includes(q)||String(c.imo||'').includes(q)))
-    .map(c=>'<div class="row" onclick="focusVessel('+c.mmsi+')">'
-      +'<div class="dot '+c.st+'"></div>'
-      +'<div style="flex:1"><div class="name">'+c.name+'</div>'
-        +'<div class="meta">'+c.mmsi+' · '+STATUS_KO[c.st]+' · 최종 '+fmtAge(c.h)+' 전'+(c.est?' · <span class="est">'+c.mode+'</span>':'')+'</div>'
-        +'<div class="meta">→ '+(c.destination||'—')+'</div></div>'
-      +'<div class="rt"><div class="clock">'+c.loc.text+'</div><div class="meta">'+c.loc.tz+'</div>'
-        +(c.contactable?'<span class="pill on">연락가능</span>':'<span class="pill off">시간외</span>')+'</div>'
-    +'</div>').join('');
+  const f=rows.filter(c=>(!only||c.contactable)&&(!q||c.name.toLowerCase().includes(q)||String(c.mmsi).includes(q)||String(c.imo||'').includes(q)));
+  const rank={live:0,dr:1,stale:2,ref:3};
+  const pos=f.filter(c=>c.hasPos).sort((a,b)=>(b.contactable-a.contactable)||((rank[a.st]||0)-(rank[b.st]||0))||(a.loc.hour-b.loc.hour));
+  const no=f.filter(c=>!c.hasPos).sort((a,b)=>a.name.localeCompare(b.name));
+  let html=pos.map(rowHtml).join('');
+  if(no.length){ html+='<div class="sechd">위치 미수신 · 대기 '+no.length+'척 (AIS 연안 접근 시 자동 표시)</div>'+no.map(rowHtml).join(''); }
   document.getElementById('list').innerHTML=html||'<div class="row"><div class="meta">해당 선박 없음</div></div>';
 }
-window.focusVessel=function(mmsi){const c=computeVessel(FLEET.find(v=>v.mmsi===mmsi));map.setView(c.pos,6,{animate:true});layers[mmsi].marker.openPopup();};
+window.focusVessel=function(mmsi){const c=computeVessel(FLEET.find(v=>v.mmsi===mmsi));if(!c.hasPos)return;map.setView(c.pos,6,{animate:true});layers[mmsi].marker.openPopup();};
 function fmtCoord(v,ax){const h=v>=0?ax[0]:ax[1];return Math.abs(v).toFixed(3)+'°'+h;}
-function fmtAge(h){if(h<1)return Math.round(h*60)+'분';if(h<48)return h.toFixed(1)+'시간';return Math.round(h/24)+'일';}
+function fmtAge(h){if(h==null)return'—';if(h<1)return Math.round(h*60)+'분';if(h<48)return h.toFixed(1)+'시간';return Math.round(h/24)+'일';}
 
+async function fetchJson(u){try{const r=await fetch(u+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;return await r.json();}catch(e){return null;}}
 async function load(){
-  try{
-    const r=await fetch(CONFIG.dataUrl+'?t='+Date.now(),{cache:'no-store'}); if(!r.ok)throw new Error(r.status);
-    const j=await r.json(); FLEET=j.vessels||j;
-    document.getElementById('updated').innerHTML='데이터 기준: <b>'+(j.generatedAt?new Date(j.generatedAt).toLocaleString('ko-KR'):'샘플')+'</b> · 선박 '+FLEET.length+'척';
-  }catch(e){ FLEET=SAMPLE.vessels; document.getElementById('updated').innerHTML='⚠ 실데이터 없음 — <b>내장 샘플</b> ('+FLEET.length+'척)'; }
+  const [ros,pos,ref]=await Promise.all([fetchJson(CONFIG.rosterUrl),fetchJson(CONFIG.dataUrl),fetchJson(CONFIG.refUrl)]);
+  const roster=ros&&ros.vessels?ros.vessels:null;
+  const posBy={}; if(pos&&pos.vessels)pos.vessels.forEach(v=>posBy[v.mmsi]=v);
+  const refBy={}; if(ref&&ref.vessels)ref.vessels.forEach(v=>refBy[v.mmsi]=v);
+  let aisN=0,refN=0;
+  if(roster){
+    FLEET=roster.map(r=>{
+      if(posBy[r.mmsi]){aisN++;return Object.assign({},r,posBy[r.mmsi],{hasPos:true,source:"ais"});}
+      if(refBy[r.mmsi]){refN++;return Object.assign({},r,refBy[r.mmsi],{hasPos:true,source:"ref"});}
+      return Object.assign({},r,{hasPos:false});
+    });
+  }else{ FLEET=SAMPLE.vessels.map(v=>Object.assign({},v,{hasPos:true,source:"ais"})); }
+  const total=FLEET.length, gen=pos?pos.generatedAt:null;
+  document.getElementById('updated').innerHTML='기준 <b>'+(gen?new Date(gen).toLocaleString('ko-KR'):'샘플')+'</b> · 선대 '+total+'척 · <b style="color:var(--live)">AIS '+aisN+'</b> / <b style="color:var(--ref)">참고 '+refN+'</b> / 대기 '+(total-aisN-refN);
   draw();
-  if(!load._fitted&&FLEET.length){const g=L.featureGroup(Object.values(layers).map(l=>l.marker));try{map.fitBounds(g.getBounds().pad(0.2));}catch(e){}load._fitted=true;}
+  if(!load._fitted){const ms=Object.values(layers).map(l=>l.marker);if(ms.length){const g=L.featureGroup(ms);try{map.fitBounds(g.getBounds().pad(0.2));}catch(e){}load._fitted=true;}}
 }
 document.getElementById('search').addEventListener('input',()=>draw());
 document.getElementById('onlyContact').addEventListener('change',()=>draw());
 setInterval(draw,CONFIG.refreshMs); setInterval(load,CONFIG.reloadMs);
 
 const hoursAgo=h=>new Date(Date.now()-h*3600000).toISOString();
-const SAMPLE={generatedAt:new Date().toISOString(),vessels:[
+const SAMPLE={vessels:[
  {mmsi:440371000,name:"ASIAN CAPTAIN",imo:9158616,lat:35.1,lon:129.04,sog:0.1,maxSog:18.2,cog:0,destination:"KRPUS",timestamp:hoursAgo(0.3)},
- {mmsi:370967000,name:"MORNING LISA",imo:9383417,lat:50.65,lon:0.61,sog:11.7,maxSog:18.9,cog:255,destination:"GBSOU",timestamp:hoursAgo(1.1)},
- {mmsi:538005452,name:"MORNING POST",imo:9669029,lat:53.52,lon:4.85,sog:8.9,maxSog:19.1,cog:247,destination:"BEANR",timestamp:hoursAgo(2.5)},
- {mmsi:441947000,name:"ASIAN MAJESTY",imo:9203576,lat:5.0,lon:80.0,sog:0.4,maxSog:17.5,cog:95,destination:"AEJEA",timestamp:hoursAgo(14)},
- {mmsi:372914000,name:"MORNING CONDUCTOR",imo:9336050,lat:20.0,lon:-40.0,sog:16.0,maxSog:19.0,cog:290,destination:"USBAL",timestamp:hoursAgo(30)},
- {mmsi:235011580,name:"MORNING CONCERT",imo:9312822,lat:-33.9,lon:18.4,sog:0.2,maxSog:18.4,cog:60,destination:"ZADUR",timestamp:hoursAgo(48)}
+ {mmsi:370967000,name:"MORNING LISA",imo:9383417,lat:50.65,lon:0.61,sog:11.7,maxSog:18.9,cog:255,destination:"GBSOU",timestamp:hoursAgo(1.1)}
 ]};
 load();
 </script>
