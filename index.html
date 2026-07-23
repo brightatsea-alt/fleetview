@@ -217,8 +217,6 @@ function rowHtml(c){
 }
 function renderList(rows){
   const q=(document.getElementById('search').value||'').toLowerCase(), only=document.getElementById('onlyContact').checked;
-  const active=SELECTED.size>0||q||only;
-  if(!active){ document.getElementById('list').innerHTML='<div class="hint">지도에 <b style="color:var(--text)">전체 선대</b> 표시 중.<br><br>위 <b style="color:var(--accent)">⚓ 선박 다중선택</b>을 눌러 선박을 고르면(중복 선택 가능) 지도·목록이 선택한 선박만으로 좁혀집니다.</div>'; return; }
   const f=rows.filter(c=>(!only||c.contactable)&&(!q||c.name.toLowerCase().includes(q)||String(c.mmsi).includes(q)||String(c.imo||'').includes(q)));
   const rank={live:0,dr:1,stale:2,ref:3};
   const pos=f.filter(c=>c.hasPos).sort((a,b)=>(b.contactable-a.contactable)||((rank[a.st]||0)-(rank[b.st]||0))||(a.loc.hour-b.loc.hour));
