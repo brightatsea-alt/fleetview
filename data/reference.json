@@ -1,0 +1,22 @@
+{
+  "_comment": "포털 스냅샷 기반 대략 참고위치(수동). 실제 AIS 수신 시 자동으로 덮어써짐. 좌표는 해역 수준 근사치.",
+  "generatedAt": "2026-07-23T00:00:00Z",
+  "source": "portal-snapshot-approx",
+  "vessels": [
+    { "mmsi": 440371000, "name": "ASIAN CAPTAIN",     "lat": 12,  "lon": -105 },
+    { "mmsi": 441992000, "name": "ASIAN VISION",       "lat": 5,   "lon": -88 },
+    { "mmsi": 441947000, "name": "ASIAN MAJESTY",      "lat": 6,   "lon": 80 },
+    { "mmsi": 440114000, "name": "ASIAN EMPIRE",       "lat": 1,   "lon": 73 },
+    { "mmsi": 440058000, "name": "ASIAN DYNASTY",      "lat": 39,  "lon": 150 },
+    { "mmsi": 441722000, "name": "ASIAN EMPEROR",      "lat": 18,  "lon": -40 },
+    { "mmsi": 372627000, "name": "MORNING LILY",       "lat": 35,  "lon": -48 },
+    { "mmsi": 371659000, "name": "MORNING COMPOSER",   "lat": 33,  "lon": -44 },
+    { "mmsi": 538007250, "name": "MORNING PROSPERITY", "lat": 35,  "lon": -13 },
+    { "mmsi": 538005521, "name": "MORNING PILOT",      "lat": 31,  "lon": 32 },
+    { "mmsi": 538005617, "name": "MORNING PRIDE",      "lat": 1,   "lon": 5 },
+    { "mmsi": 370567000, "name": "MORNING LINDA",      "lat": -30, "lon": -73 },
+    { "mmsi": 538007249, "name": "MORNING PEACE",      "lat": -33, "lon": 10 },
+    { "mmsi": 372914000, "name": "MORNING CONDUCTOR",  "lat": -9,  "lon": 119 },
+    { "mmsi": 538005232, "name": "MORNING CAPO",       "lat": 40,  "lon": 156 }
+  ]
+}
