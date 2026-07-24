@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T10:12:13.004Z",
+  "generatedAt": "2026-07-24T12:17:02.050Z",
   "source": "aisstream.io",
   "count": 3,
   "vessels": [
@@ -21,27 +21,27 @@
       "mmsi": 372802000,
       "name": "Morning Lucy",
       "imo": 9383431,
-      "lat": 50.885130000000004,
-      "lon": -1.39294,
+      "lat": 50.885086666666666,
+      "lon": -1.392965,
       "sog": 0,
       "cog": 310.4,
       "heading": 183,
       "maxSog": 16.1,
       "destination": "GB SOU              ",
       "eta": "7-24 02:00",
-      "timestamp": "2026-07-24 10:10:32.237364937 +0000 UTC"
+      "timestamp": "2026-07-24 12:16:33.228012482 +0000 UTC"
     },
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 51.34988666666666,
-      "lon": 4.25263,
-      "sog": 8.8,
-      "cog": 112.3,
-      "heading": 113,
+      "lat": 51.27223166666667,
+      "lon": 4.220328333333333,
+      "sog": 0,
+      "cog": 338.9,
+      "heading": 29,
       "destination": "BEANR               ",
       "eta": "7-23 08:00",
-      "timestamp": "2026-07-24 00:02:47.662905444 +0000 UTC",
+      "timestamp": "2026-07-24 12:15:18.085810715 +0000 UTC",
       "imo": 9669029,
       "maxSog": 13.7
     }
