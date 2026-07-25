@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-25T09:32:40.387Z",
+  "generatedAt": "2026-07-25T11:05:43.533Z",
   "source": "aisstream.io",
-  "count": 3,
+  "count": 4,
   "vessels": [
     {
       "mmsi": 370967000,
@@ -32,16 +32,30 @@
       "timestamp": "2026-07-25 01:56:26.321845096 +0000 UTC"
     },
     {
+      "mmsi": 441722000,
+      "name": "Asian Emperor",
+      "imo": 9176632,
+      "lat": 31.130864999999996,
+      "lon": -81.5326,
+      "sog": 0,
+      "cog": 252.6,
+      "heading": 111,
+      "maxSog": 0,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-25 11:03:58.563754871 +0000 UTC"
+    },
+    {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 51.000285,
-      "lon": 1.3152416666666666,
-      "sog": 6.2,
-      "cog": 234.9,
-      "heading": 234,
+      "lat": 50.89041666666667,
+      "lon": 1.1103966666666667,
+      "sog": 6.8,
+      "cog": 230,
+      "heading": 228,
       "destination": "GBSOU               ",
       "eta": "7-26 03:00",
-      "timestamp": "2026-07-25 09:32:08.32720886 +0000 UTC",
+      "timestamp": "2026-07-25 11:05:37.259204104 +0000 UTC",
       "imo": 9669029,
       "maxSog": 16.9
     }
