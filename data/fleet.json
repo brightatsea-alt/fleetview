@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T19:02:12.983Z",
+  "generatedAt": "2026-07-26T20:14:11.692Z",
   "source": "aisstream.io",
   "count": 4,
   "vessels": [
@@ -53,8 +53,8 @@
       "sog": 0,
       "cog": 3.4,
       "heading": 184,
-      "destination": "GBSOU               ",
-      "eta": "7-26 06:45",
+      "destination": "ESSDR               ",
+      "eta": "7-28 12:00",
       "timestamp": "2026-07-26 16:01:45.016961955 +0000 UTC",
       "imo": 9669029,
       "maxSog": 16.9
