@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-26T21:54:49.187Z",
+  "generatedAt": "2026-07-26T22:55:24.971Z",
   "source": "aisstream.io",
-  "count": 4,
+  "count": 5,
   "vessels": [
     {
       "mmsi": 370967000,
@@ -48,16 +48,30 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 50.81574166666667,
-      "lon": -1.2943366666666667,
-      "sog": 10.6,
-      "cog": 144.2,
-      "heading": 145,
+      "lat": 50.73307333333333,
+      "lon": -1.0623133333333332,
+      "sog": 11.3,
+      "cog": 119.7,
+      "heading": 120,
       "destination": "ESSDR               ",
       "eta": "7-28 12:00",
-      "timestamp": "2026-07-26 21:53:22.251881553 +0000 UTC",
+      "timestamp": "2026-07-26 22:54:39.901897418 +0000 UTC",
       "imo": 9669029,
       "maxSog": 16.9
+    },
+    {
+      "mmsi": 636018238,
+      "name": "Morning Cornet",
+      "imo": 9329473,
+      "lat": 1.1840033333333333,
+      "lon": 103.85075833333333,
+      "sog": 15.5,
+      "cog": 66.1,
+      "heading": 69,
+      "maxSog": 15.5,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-26 22:52:54.41698896 +0000 UTC"
     }
   ]
 }
