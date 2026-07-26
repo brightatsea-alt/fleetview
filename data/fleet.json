@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T02:02:28.093Z",
+  "generatedAt": "2026-07-26T05:39:20.723Z",
   "source": "aisstream.io",
   "count": 4,
   "vessels": [
@@ -48,14 +48,14 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 50.34335166666666,
-      "lon": -0.890535,
-      "sog": 8.3,
-      "cog": 251.9,
-      "heading": 255,
+      "lat": 50.643863333333336,
+      "lon": -0.91804,
+      "sog": 6.7,
+      "cog": 356.9,
+      "heading": 340,
       "destination": "GBSOU               ",
       "eta": "7-26 06:45",
-      "timestamp": "2026-07-25 23:56:07.319863855 +0000 UTC",
+      "timestamp": "2026-07-26 05:39:17.106481453 +0000 UTC",
       "imo": 9669029,
       "maxSog": 16.9
     }
