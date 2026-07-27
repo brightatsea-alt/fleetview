@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-07-27T02:09:59.978Z",
+  "generatedAt": "2026-07-27T06:22:17.789Z",
   "source": "aisstream.io",
-  "count": 6,
+  "count": 7,
   "vessels": [
     {
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 34.646445,
-      "lon": 129.1527,
-      "sog": 5.1,
-      "cog": 23.2,
-      "heading": 25,
+      "lat": 35.28635666666666,
+      "lon": 129.46328833333334,
+      "sog": 2.4,
+      "cog": 339.8,
+      "heading": 307,
       "maxSog": 5.3,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-07-27 02:09:18.706750176 +0000 UTC"
+      "timestamp": "2026-07-27 06:21:30.979826777 +0000 UTC"
     },
     {
       "mmsi": 370967000,
@@ -49,15 +49,29 @@
       "mmsi": 441722000,
       "name": "Asian Emperor",
       "imo": 9176632,
-      "lat": 31.130876666666666,
-      "lon": -81.532605,
-      "sog": 0,
-      "cog": 252.6,
-      "heading": 111,
-      "maxSog": 0,
+      "lat": 37.032358333333335,
+      "lon": -76.05969833333333,
+      "sog": 17.2,
+      "cog": 325.4,
+      "heading": 325,
+      "maxSog": 17.2,
       "destination": "US BAL              ",
       "eta": "7-27 05:00",
-      "timestamp": "2026-07-25 17:03:52.24055601 +0000 UTC"
+      "timestamp": "2026-07-27 06:22:05.502865566 +0000 UTC"
+    },
+    {
+      "mmsi": 538005232,
+      "name": "Morning Capo",
+      "imo": 9663295,
+      "lat": 35.207514999999994,
+      "lon": 130.06683666666666,
+      "sog": 17.8,
+      "cog": 236.5,
+      "heading": 240,
+      "maxSog": 17.8,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-27 06:20:45.993462446 +0000 UTC"
     },
     {
       "mmsi": 538005452,
