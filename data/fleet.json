@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T07:38:37.986Z",
+  "generatedAt": "2026-07-28T10:29:43.710Z",
   "source": "aisstream.io",
   "count": 7,
   "vessels": [
@@ -49,15 +49,15 @@
       "mmsi": 441722000,
       "name": "Asian Emperor",
       "imo": 9176632,
-      "lat": 39.24392,
-      "lon": -76.537505,
-      "sog": 0,
-      "cog": 131.4,
-      "heading": 325,
+      "lat": 37.495088333333335,
+      "lon": -76.05893333333333,
+      "sog": 17.8,
+      "cog": 204,
+      "heading": 205,
       "maxSog": 17.8,
       "destination": "US BAL              ",
       "eta": "7-27 06:00",
-      "timestamp": "2026-07-27 20:17:00.29872223 +0000 UTC"
+      "timestamp": "2026-07-28 10:27:17.882456547 +0000 UTC"
     },
     {
       "mmsi": 538005232,
