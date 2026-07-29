@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-29T20:46:29.743Z",
+  "generatedAt": "2026-07-29T21:55:18.666Z",
   "source": "aisstream.io",
-  "count": 10,
+  "count": 11,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -63,15 +63,15 @@
       "mmsi": 441722000,
       "name": "Asian Emperor",
       "imo": 9176632,
-      "lat": 39.89627333333333,
-      "lon": -75.14029000000001,
-      "sog": 0,
-      "cog": 302.4,
-      "heading": 280,
+      "lat": 39.87981666666667,
+      "lon": -75.19533333333334,
+      "sog": 13.3,
+      "cog": 244.3,
+      "heading": 241,
       "maxSog": 17.8,
-      "destination": "US BAL              ",
-      "eta": "7-27 06:00",
-      "timestamp": "2026-07-29 20:44:35.910787681 +0000 UTC"
+      "destination": "USPHL>PACTB         ",
+      "eta": "8-6 07:00",
+      "timestamp": "2026-07-29 21:54:22.347745923 +0000 UTC"
     },
     {
       "mmsi": 441995000,
@@ -100,6 +100,20 @@
       "destination": null,
       "eta": null,
       "timestamp": "2026-07-27 06:20:45.993462446 +0000 UTC"
+    },
+    {
+      "mmsi": 538005333,
+      "name": "Morning Chant",
+      "imo": 9663300,
+      "lat": -32.46322333333333,
+      "lon": 15.801825000000001,
+      "sog": 17.3,
+      "cog": 135.9,
+      "heading": 135,
+      "maxSog": 17.4,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-29 21:55:06.643673914 +0000 UTC"
     },
     {
       "mmsi": 538005452,
