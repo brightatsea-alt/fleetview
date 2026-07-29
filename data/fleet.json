@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-29T17:09:08.491Z",
+  "generatedAt": "2026-07-29T19:03:36.348Z",
   "source": "aisstream.io",
-  "count": 9,
+  "count": 10,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -46,18 +46,32 @@
       "timestamp": "2026-07-25 22:46:32.534040654 +0000 UTC"
     },
     {
+      "mmsi": 440253000,
+      "name": "Morning Menad",
+      "imo": 9318515,
+      "lat": 34.48793666666666,
+      "lon": 129.00719166666667,
+      "sog": 15.1,
+      "cog": 236.2,
+      "heading": 234,
+      "maxSog": 15.1,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-29 19:01:05.519839149 +0000 UTC"
+    },
+    {
       "mmsi": 441722000,
       "name": "Asian Emperor",
       "imo": 9176632,
-      "lat": 39.896253333333334,
-      "lon": -75.14028166666667,
+      "lat": 39.89626666666666,
+      "lon": -75.14028499999999,
       "sog": 0,
       "cog": 302.4,
       "heading": 280,
       "maxSog": 17.8,
       "destination": "US BAL              ",
       "eta": "7-27 06:00",
-      "timestamp": "2026-07-29 13:50:37.999665031 +0000 UTC"
+      "timestamp": "2026-07-29 19:02:35.621472764 +0000 UTC"
     },
     {
       "mmsi": 441995000,
