@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T22:56:24.944Z",
+  "generatedAt": "2026-07-29T23:57:49.399Z",
   "source": "aisstream.io",
   "count": 11,
   "vessels": [
@@ -63,15 +63,15 @@
       "mmsi": 441722000,
       "name": "Asian Emperor",
       "imo": 9176632,
-      "lat": 39.87981666666667,
-      "lon": -75.19533333333334,
-      "sog": 13.3,
-      "cog": 244.3,
-      "heading": 241,
+      "lat": 39.580886666666665,
+      "lon": -75.55686833333333,
+      "sog": 15.3,
+      "cog": 154.5,
+      "heading": 156,
       "maxSog": 17.8,
       "destination": "USPHL>PACTB         ",
       "eta": "8-6 07:00",
-      "timestamp": "2026-07-29 21:54:22.347745923 +0000 UTC"
+      "timestamp": "2026-07-29 23:56:17.542050584 +0000 UTC"
     },
     {
       "mmsi": 441995000,
