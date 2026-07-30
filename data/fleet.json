@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-30T22:07:54.964Z",
+  "generatedAt": "2026-07-30T23:58:30.004Z",
   "source": "aisstream.io",
-  "count": 12,
+  "count": 13,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -58,6 +58,20 @@
       "destination": null,
       "eta": null,
       "timestamp": "2026-07-29 19:01:05.519839149 +0000 UTC"
+    },
+    {
+      "mmsi": 441093000,
+      "name": "Morning Chorus",
+      "imo": 9312834,
+      "lat": 34.985615,
+      "lon": 129.09620833333332,
+      "sog": 12.2,
+      "cog": 28.5,
+      "heading": 21,
+      "maxSog": 12.3,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-30 23:57:13.80988166 +0000 UTC"
     },
     {
       "mmsi": 441722000,
