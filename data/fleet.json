@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-30T19:15:12.858Z",
+  "generatedAt": "2026-07-30T21:00:51.327Z",
   "source": "aisstream.io",
-  "count": 11,
+  "count": 12,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -72,6 +72,20 @@
       "destination": "USPHL>PACTB         ",
       "eta": "8-6 07:00",
       "timestamp": "2026-07-29 23:56:17.542050584 +0000 UTC"
+    },
+    {
+      "mmsi": 441992000,
+      "name": "Asian Vision",
+      "imo": 9122966,
+      "lat": 27.741311666666665,
+      "lon": -121.76344166666667,
+      "sog": 17.6,
+      "cog": 298.8,
+      "heading": 299,
+      "maxSog": 17.6,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-07-30 20:58:42.819113329 +0000 UTC"
     },
     {
       "mmsi": 441995000,
