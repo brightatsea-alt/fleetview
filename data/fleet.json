@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-01T02:05:12.528Z",
+  "generatedAt": "2026-08-01T05:50:01.484Z",
   "source": "aisstream.io",
-  "count": 13,
+  "count": 14,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -35,15 +35,29 @@
       "mmsi": 372802000,
       "name": "Morning Lucy",
       "imo": 9383431,
-      "lat": 44.620961666666666,
-      "lon": -63.51251333333333,
+      "lat": 44.62096,
+      "lon": -63.512476666666664,
       "sog": 0,
       "cog": 313.6,
       "heading": 311,
       "maxSog": 16.9,
       "destination": "CA HAL              ",
       "eta": "7-31 10:00",
-      "timestamp": "2026-08-01 02:04:01.399890647 +0000 UTC"
+      "timestamp": "2026-08-01 05:49:04.12600283 +0000 UTC"
+    },
+    {
+      "mmsi": 440058000,
+      "name": "Asian Dynasty",
+      "imo": 9203588,
+      "lat": 32.69258166666667,
+      "lon": -126.03984333333332,
+      "sog": 16.1,
+      "cog": 129.7,
+      "heading": 125,
+      "maxSog": 16.1,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-08-01 05:48:03.473941068 +0000 UTC"
     },
     {
       "mmsi": 440253000,
