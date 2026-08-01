@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T11:59:54.659Z",
+  "generatedAt": "2026-08-01T13:16:09.563Z",
   "source": "aisstream.io",
   "count": 14,
   "vessels": [
@@ -49,15 +49,15 @@
       "mmsi": 440058000,
       "name": "Asian Dynasty",
       "imo": 9203588,
-      "lat": 31.922475000000002,
-      "lon": -124.82643,
-      "sog": 16.7,
-      "cog": 131.6,
-      "heading": 128,
-      "maxSog": 16.7,
+      "lat": 31.42950666666667,
+      "lon": -124.11775833333333,
+      "sog": 17.2,
+      "cog": 129.7,
+      "heading": 126,
+      "maxSog": 17.2,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-01 10:28:46.810800317 +0000 UTC"
+      "timestamp": "2026-08-01 13:15:35.677103258 +0000 UTC"
     },
     {
       "mmsi": 440253000,
