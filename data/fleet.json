@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T23:07:41.264Z",
+  "generatedAt": "2026-08-04T01:49:48.437Z",
   "source": "aisstream.io",
   "count": 14,
   "vessels": [
@@ -175,15 +175,15 @@
       "mmsi": 538005617,
       "name": "Morning Pride",
       "imo": 9681431,
-      "lat": 51.45041666666667,
-      "lon": 0.35971666666666663,
-      "sog": 0,
-      "cog": 6.3,
-      "heading": 268,
+      "lat": 51.49519833333333,
+      "lon": 0.7158633333333333,
+      "sog": 13.4,
+      "cog": 101.3,
+      "heading": 102,
       "maxSog": 17.1,
-      "destination": "GBTIL               ",
-      "eta": "8-2 22:00",
-      "timestamp": "2026-08-03 23:07:27.210138511 +0000 UTC"
+      "destination": "NLRTM               ",
+      "eta": "8-4 15:00",
+      "timestamp": "2026-08-04 01:49:27.38218891 +0000 UTC"
     },
     {
       "mmsi": 636018238,
