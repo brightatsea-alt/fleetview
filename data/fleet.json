@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T19:23:01.207Z",
+  "generatedAt": "2026-08-04T21:06:02.037Z",
   "source": "aisstream.io",
   "count": 14,
   "vessels": [
@@ -175,15 +175,15 @@
       "mmsi": 538005617,
       "name": "Morning Pride",
       "imo": 9681431,
-      "lat": 51.90988333333333,
-      "lon": 4.22476,
-      "sog": 4.5,
-      "cog": 163.7,
-      "heading": 165,
+      "lat": 51.894665,
+      "lon": 4.247331666666667,
+      "sog": 0.1,
+      "cog": 24.7,
+      "heading": 287,
       "maxSog": 17.1,
       "destination": "NLRTM               ",
       "eta": "8-4 15:00",
-      "timestamp": "2026-08-04 17:38:08.893476808 +0000 UTC"
+      "timestamp": "2026-08-04 21:03:48.339939623 +0000 UTC"
     },
     {
       "mmsi": 636018238,
