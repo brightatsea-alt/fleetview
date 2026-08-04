@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T21:06:02.037Z",
+  "generatedAt": "2026-08-04T22:57:21.028Z",
   "source": "aisstream.io",
   "count": 14,
   "vessels": [
@@ -182,7 +182,7 @@
       "heading": 287,
       "maxSog": 17.1,
       "destination": "NLRTM               ",
-      "eta": "8-4 15:00",
+      "eta": "8-4 15:30",
       "timestamp": "2026-08-04 21:03:48.339939623 +0000 UTC"
     },
     {
