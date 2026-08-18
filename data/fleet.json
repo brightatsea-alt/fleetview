@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T09:26:31.395Z",
+  "generatedAt": "2026-08-18T10:22:07.038Z",
   "source": "aisstream.io",
   "count": 15,
   "vessels": [
@@ -147,15 +147,15 @@
       "mmsi": 538005232,
       "name": "Morning Capo",
       "imo": 9663295,
-      "lat": 49.301245,
-      "lon": -123.18258833333333,
+      "lat": 49.30113166666667,
+      "lon": -123.18211666666666,
       "sog": 0.1,
-      "cog": 324.1,
-      "heading": 203,
+      "cog": 357.2,
+      "heading": 231,
       "maxSog": 17.8,
       "destination": "CANWE               ",
       "eta": "8-14 06:00",
-      "timestamp": "2026-08-18 05:23:16.232472662 +0000 UTC"
+      "timestamp": "2026-08-18 10:20:16.22322889 +0000 UTC"
     },
     {
       "mmsi": 538005333,
@@ -195,8 +195,8 @@
       "cog": 346.2,
       "heading": 150,
       "maxSog": 17.1,
-      "destination": "NLRTM               ",
-      "eta": "8-4 15:30",
+      "destination": "BEZEE               ",
+      "eta": "8-18 04:30",
       "timestamp": "2026-08-18 06:29:58.34755699 +0000 UTC"
     },
     {
