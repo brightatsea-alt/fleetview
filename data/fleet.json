@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-18T00:47:04.523Z",
+  "generatedAt": "2026-08-18T02:13:15.691Z",
   "source": "aisstream.io",
-  "count": 14,
+  "count": 15,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -16,6 +16,20 @@
       "destination": null,
       "eta": null,
       "timestamp": "2026-08-02 14:56:20.87742001 +0000 UTC"
+    },
+    {
+      "mmsi": 351446000,
+      "name": "Morning Caroline",
+      "imo": 9338723,
+      "lat": 27.237461666666665,
+      "lon": -15.29514,
+      "sog": 15.6,
+      "cog": 22.5,
+      "heading": 22,
+      "maxSog": 15.6,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-08-18 02:12:59.423058333 +0000 UTC"
     },
     {
       "mmsi": 370967000,
@@ -133,15 +147,15 @@
       "mmsi": 538005232,
       "name": "Morning Capo",
       "imo": 9663295,
-      "lat": 49.30086333333334,
-      "lon": -123.18192833333333,
+      "lat": 49.30098666666667,
+      "lon": -123.18194,
       "sog": 0,
-      "cog": 38.2,
-      "heading": 293,
+      "cog": 14.1,
+      "heading": 273,
       "maxSog": 17.8,
       "destination": "CANWE               ",
       "eta": "8-14 06:00",
-      "timestamp": "2026-08-18 00:44:16.235612535 +0000 UTC"
+      "timestamp": "2026-08-18 02:11:16.156522514 +0000 UTC"
     },
     {
       "mmsi": 538005333,
@@ -175,15 +189,15 @@
       "mmsi": 538005617,
       "name": "Morning Pride",
       "imo": 9681431,
-      "lat": 51.97911166666667,
-      "lon": 2.7537366666666667,
-      "sog": 16.9,
-      "cog": 217.4,
-      "heading": 217,
+      "lat": 51.702980000000004,
+      "lon": 2.6398366666666666,
+      "sog": 12.9,
+      "cog": 167,
+      "heading": 171,
       "maxSog": 17.1,
       "destination": "NLRTM               ",
       "eta": "8-4 15:30",
-      "timestamp": "2026-08-18 00:45:04.687325508 +0000 UTC"
+      "timestamp": "2026-08-18 02:12:26.64154089 +0000 UTC"
     },
     {
       "mmsi": 636018238,
