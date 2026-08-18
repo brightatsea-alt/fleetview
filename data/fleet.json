@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T20:16:50.465Z",
+  "generatedAt": "2026-08-18T21:18:00.757Z",
   "source": "aisstream.io",
   "count": 15,
   "vessels": [
@@ -189,15 +189,15 @@
       "mmsi": 538005617,
       "name": "Morning Pride",
       "imo": 9681431,
-      "lat": 51.313815,
-      "lon": 3.22756,
+      "lat": 51.31381833333333,
+      "lon": 3.227595,
       "sog": 0.1,
-      "cog": 13.8,
+      "cog": 30.2,
       "heading": 333,
       "maxSog": 17.1,
       "destination": "BEZEE               ",
       "eta": "8-18 04:30",
-      "timestamp": "2026-08-18 19:22:50.434019694 +0000 UTC"
+      "timestamp": "2026-08-18 21:16:50.430751369 +0000 UTC"
     },
     {
       "mmsi": 636018238,
