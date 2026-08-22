@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T20:16:18.151Z",
+  "generatedAt": "2026-08-22T21:16:40.349Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -21,15 +21,15 @@
       "mmsi": 351446000,
       "name": "Morning Caroline",
       "imo": 9338723,
-      "lat": 36.411323333333335,
-      "lon": 14.348916666666666,
+      "lat": 36.34048333333333,
+      "lon": 14.639045000000001,
       "sog": 14.4,
-      "cog": 106.7,
-      "heading": 107,
+      "cog": 106.8,
+      "heading": 106,
       "maxSog": 16,
-      "destination": null,
-      "eta": null,
-      "timestamp": "2026-08-22 20:14:05.578091891 +0000 UTC"
+      "destination": "EG SCN              ",
+      "eta": "8-25 16:00",
+      "timestamp": "2026-08-22 21:14:40.951754362 +0000 UTC"
     },
     {
       "mmsi": 370967000,
@@ -119,15 +119,15 @@
       "mmsi": 441992000,
       "name": "Asian Vision",
       "imo": 9122966,
-      "lat": 30.988049999999998,
-      "lon": -128.42282333333333,
-      "sog": 17.7,
-      "cog": 296.8,
-      "heading": 298,
-      "maxSog": 18.1,
+      "lat": 33.335923333333334,
+      "lon": 136.18939666666668,
+      "sog": 19.2,
+      "cog": 63.2,
+      "heading": 59,
+      "maxSog": 19.2,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-07-31 19:12:36.909738015 +0000 UTC"
+      "timestamp": "2026-08-22 21:15:48.56978331 +0000 UTC"
     },
     {
       "mmsi": 441995000,
