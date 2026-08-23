@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T02:22:29.180Z",
+  "generatedAt": "2026-08-23T03:45:28.436Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -7,29 +7,29 @@
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 26.25666,
-      "lon": 121.440365,
-      "sog": 15.6,
-      "cog": 204,
-      "heading": 199,
-      "maxSog": 16.7,
+      "lat": -30.059228333333333,
+      "lon": 14.630716666666666,
+      "sog": 17.9,
+      "cog": 327,
+      "heading": 327,
+      "maxSog": 17.9,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-02 14:56:20.87742001 +0000 UTC"
+      "timestamp": "2026-08-23 03:44:09.769673787 +0000 UTC"
     },
     {
       "mmsi": 351446000,
       "name": "Morning Caroline",
       "imo": 9338723,
-      "lat": 36.033096666666665,
-      "lon": 16.044063333333334,
-      "sog": 13.1,
-      "cog": 104.3,
-      "heading": 105,
+      "lat": 35.951665000000006,
+      "lon": 16.40773666666667,
+      "sog": 13.4,
+      "cog": 106.3,
+      "heading": 106,
       "maxSog": 16,
       "destination": "EG SCN              ",
       "eta": "8-25 16:00",
-      "timestamp": "2026-08-23 02:20:45.395302824 +0000 UTC"
+      "timestamp": "2026-08-23 03:44:15.965015293 +0000 UTC"
     },
     {
       "mmsi": 370967000,
