@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T15:17:18.477Z",
+  "generatedAt": "2026-08-23T16:18:18.284Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -119,15 +119,15 @@
       "mmsi": 441992000,
       "name": "Asian Vision",
       "imo": 9122966,
-      "lat": 33.77758333333333,
-      "lon": 137.22649,
-      "sog": 0.8,
-      "cog": 105.4,
-      "heading": 239,
+      "lat": 33.751555,
+      "lon": 137.30037666666666,
+      "sog": 0.2,
+      "cog": 136.5,
+      "heading": 250,
       "maxSog": 19.2,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-23 09:21:40.229138373 +0000 UTC"
+      "timestamp": "2026-08-23 16:17:48.946217816 +0000 UTC"
     },
     {
       "mmsi": 441995000,
@@ -189,15 +189,15 @@
       "mmsi": 538005521,
       "name": "Morning Pilot",
       "imo": 9669031,
-      "lat": -30.778053333333332,
-      "lon": 14.561348333333333,
-      "sog": 16.6,
-      "cog": 136.8,
-      "heading": 140,
+      "lat": -30.9939,
+      "lon": 14.78375,
+      "sog": 16.5,
+      "cog": 137.3,
+      "heading": 139,
       "maxSog": 17.8,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-23 15:15:11.717240363 +0000 UTC"
+      "timestamp": "2026-08-23 16:17:53.67507487 +0000 UTC"
     },
     {
       "mmsi": 538005617,
