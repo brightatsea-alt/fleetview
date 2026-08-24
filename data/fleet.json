@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T06:42:20.842Z",
+  "generatedAt": "2026-08-24T07:54:06.659Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -189,15 +189,15 @@
       "mmsi": 538005521,
       "name": "Morning Pilot",
       "imo": 9669031,
-      "lat": -34.07402666666667,
-      "lon": 17.804253333333335,
-      "sog": 17.6,
-      "cog": 140.5,
-      "heading": 142,
+      "lat": -34.346048333333336,
+      "lon": 18.062465,
+      "sog": 16.6,
+      "cog": 132.5,
+      "heading": 135,
       "maxSog": 17.8,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-24 06:39:49.111803992 +0000 UTC"
+      "timestamp": "2026-08-24 07:52:47.530308751 +0000 UTC"
     },
     {
       "mmsi": 538005617,
