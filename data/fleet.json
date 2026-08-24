@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T23:16:05.264Z",
+  "generatedAt": "2026-08-24T00:50:04.556Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -119,15 +119,15 @@
       "mmsi": 441992000,
       "name": "Asian Vision",
       "imo": 9122966,
-      "lat": 33.757265,
-      "lon": 137.333885,
-      "sog": 0.3,
-      "cog": 20.7,
-      "heading": 16,
+      "lat": 33.77415666666666,
+      "lon": 137.35424833333335,
+      "sog": 0.8,
+      "cog": 41.4,
+      "heading": 71,
       "maxSog": 19.2,
       "destination": "JP THS              ",
       "eta": "8-24 19:20",
-      "timestamp": "2026-08-23 22:16:00.395693383 +0000 UTC"
+      "timestamp": "2026-08-24 00:49:29.832852814 +0000 UTC"
     },
     {
       "mmsi": 441995000,
