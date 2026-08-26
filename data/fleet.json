@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T08:36:10.953Z",
+  "generatedAt": "2026-08-26T09:35:38.491Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -217,15 +217,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": -29.720698333333335,
-      "lon": 13.187306666666666,
-      "sog": 15.6,
-      "cog": 317.6,
+      "lat": -29.53378,
+      "lon": 12.993716666666668,
+      "sog": 15.3,
+      "cog": 319,
       "heading": 319,
       "maxSog": 16.6,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-08-26 08:34:56.416130671 +0000 UTC"
+      "timestamp": "2026-08-26 09:33:08.184929559 +0000 UTC"
     }
   ]
 }
