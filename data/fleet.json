@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T13:27:09.231Z",
+  "generatedAt": "2026-08-27T23:27:01.066Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -49,15 +49,15 @@
       "mmsi": 372802000,
       "name": "Morning Lucy",
       "imo": 9383431,
-      "lat": 40.30847166666667,
-      "lon": -73.82667166666667,
-      "sog": 16,
-      "cog": 191.1,
-      "heading": 189,
-      "maxSog": 16.9,
+      "lat": 30.284321666666663,
+      "lon": -123.826185,
+      "sog": 17.6,
+      "cog": 306.5,
+      "heading": 309,
+      "maxSog": 17.6,
       "destination": "US NYC              ",
       "eta": "8-3 08:00",
-      "timestamp": "2026-08-05 02:09:22.648525607 +0000 UTC"
+      "timestamp": "2026-08-27 23:24:34.878229335 +0000 UTC"
     },
     {
       "mmsi": 440058000,
