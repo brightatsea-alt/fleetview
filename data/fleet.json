@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T05:23:37.930Z",
+  "generatedAt": "2026-09-06T10:01:24.996Z",
   "source": "aisstream.io",
   "count": 16,
   "vessels": [
@@ -21,15 +21,15 @@
       "mmsi": 351446000,
       "name": "Morning Caroline",
       "imo": 9338723,
-      "lat": 36.22229333333333,
-      "lon": -4.069858333333333,
-      "sog": 15.4,
-      "cog": 264.3,
-      "heading": 267,
+      "lat": 36.12021166666667,
+      "lon": -5.169361666666666,
+      "sog": 8.1,
+      "cog": 67.3,
+      "heading": 68,
       "maxSog": 18,
       "destination": "ES ALG              ",
       "eta": "9-6 10:00",
-      "timestamp": "2026-09-06 05:22:36.472624318 +0000 UTC"
+      "timestamp": "2026-09-06 10:00:22.74193424 +0000 UTC"
     },
     {
       "mmsi": 370967000,
