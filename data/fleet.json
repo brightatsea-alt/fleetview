@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-07T20:22:54.842Z",
+  "generatedAt": "2026-09-07T23:14:28.841Z",
   "source": "aisstream.io",
-  "count": 16,
+  "count": 17,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -116,6 +116,20 @@
       "timestamp": "2026-07-29 23:56:17.542050584 +0000 UTC"
     },
     {
+      "mmsi": 441947000,
+      "name": "Asian Majesty",
+      "imo": 9203576,
+      "lat": -29.25799333333333,
+      "lon": 12.852451666666667,
+      "sog": 16.3,
+      "cog": 146.4,
+      "heading": 146,
+      "maxSog": 16.3,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-09-07 23:13:33.269013779 +0000 UTC"
+    },
+    {
       "mmsi": 441992000,
       "name": "Asian Vision",
       "imo": 9122966,
@@ -217,15 +231,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": 34.311299999999996,
-      "lon": -8.44665,
-      "sog": 15.8,
-      "cog": 47.2,
-      "heading": 45,
+      "lat": 35.932048333333334,
+      "lon": -5.566028333333334,
+      "sog": 15.1,
+      "cog": 72.4,
+      "heading": 71,
       "maxSog": 16.6,
       "destination": "CN NSA > DZ DJE     ",
       "eta": "9-9 12:00",
-      "timestamp": "2026-09-07 11:10:32.754370923 +0000 UTC"
+      "timestamp": "2026-09-07 23:14:22.318487028 +0000 UTC"
     }
   ]
 }
