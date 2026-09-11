@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T00:45:34.342Z",
+  "generatedAt": "2026-09-11T05:31:02.464Z",
   "source": "aisstream.io",
-  "count": 17,
+  "count": 18,
   "vessels": [
     {
       "mmsi": 311000685,
@@ -30,6 +30,20 @@
       "destination": "ES ALG              ",
       "eta": "9-6 10:00",
       "timestamp": "2026-09-10 02:20:15.346343068 +0000 UTC"
+    },
+    {
+      "mmsi": 370567000,
+      "name": "Morning Linda",
+      "imo": 9383106,
+      "lat": -26.705116666666665,
+      "lon": 153.18458666666666,
+      "sog": 11,
+      "cog": 183.5,
+      "heading": 180,
+      "maxSog": 11,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-09-11 05:30:30.549966843 +0000 UTC"
     },
     {
       "mmsi": 370967000,
