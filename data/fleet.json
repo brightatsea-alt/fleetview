@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T14:47:15.844Z",
+  "generatedAt": "2026-09-11T18:04:58.329Z",
   "source": "aisstream.io",
   "count": 18,
   "vessels": [
@@ -41,8 +41,8 @@
       "cog": 93.3,
       "heading": 38,
       "maxSog": 11,
-      "destination": null,
-      "eta": null,
+      "destination": "CNSHG - AUBNE       ",
+      "eta": "9-11 05:30",
       "timestamp": "2026-09-11 10:19:41.952474462 +0000 UTC"
     },
     {
