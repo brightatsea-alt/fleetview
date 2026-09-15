@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T14:04:53.023Z",
+  "generatedAt": "2026-09-15T18:39:54.879Z",
   "source": "aisstream.io",
   "count": 18,
   "vessels": [
@@ -245,15 +245,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": 42.712455,
-      "lon": 7.8673166666666665,
-      "sog": 16.3,
-      "cog": 249.5,
-      "heading": 250,
+      "lat": 41.68009,
+      "lon": 4.284908333333333,
+      "sog": 16.9,
+      "cog": 249.6,
+      "heading": 249,
       "maxSog": 17.4,
       "destination": "CN NSA > DZ DJE     ",
       "eta": "9-9 12:00",
-      "timestamp": "2026-09-15 08:13:57.893581965 +0000 UTC"
+      "timestamp": "2026-09-15 18:39:16.514158364 +0000 UTC"
     }
   ]
 }
