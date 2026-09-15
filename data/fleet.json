@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T18:39:54.879Z",
+  "generatedAt": "2026-09-15T21:54:07.109Z",
   "source": "aisstream.io",
   "count": 18,
   "vessels": [
@@ -7,15 +7,15 @@
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 57.88452666666667,
-      "lon": 11.500021666666667,
-      "sog": 17.7,
-      "cog": 33.8,
-      "heading": 36,
+      "lat": 58.010263333333334,
+      "lon": 11.704301666666668,
+      "sog": 0,
+      "cog": 283.2,
+      "heading": 281,
       "maxSog": 18.5,
       "destination": "SE WAL              ",
       "eta": "9-15 08:00",
-      "timestamp": "2026-09-15 08:14:05.303069055 +0000 UTC"
+      "timestamp": "2026-09-15 21:51:33.192623312 +0000 UTC"
     },
     {
       "mmsi": 351446000,
@@ -245,15 +245,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": 41.68009,
-      "lon": 4.284908333333333,
+      "lat": 41.338485,
+      "lon": 3.12258,
       "sog": 16.9,
-      "cog": 249.6,
-      "heading": 249,
+      "cog": 249.9,
+      "heading": 251,
       "maxSog": 17.4,
-      "destination": "CN NSA > DZ DJE     ",
-      "eta": "9-9 12:00",
-      "timestamp": "2026-09-15 18:39:16.514158364 +0000 UTC"
+      "destination": "ITCVV > ESTAR       ",
+      "eta": "9-16 03:30",
+      "timestamp": "2026-09-15 21:53:46.77235574 +0000 UTC"
     }
   ]
 }
