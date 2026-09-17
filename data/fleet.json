@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-17T08:16:49.193Z",
+  "generatedAt": "2026-09-17T14:01:47.277Z",
   "source": "aisstream.io",
-  "count": 18,
+  "count": 19,
   "vessels": [
     {
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 57.689701666666664,
-      "lon": 11.866681666666667,
+      "lat": 57.689676666666664,
+      "lon": 11.86667,
       "sog": 0,
       "cog": 286.7,
-      "heading": 197,
+      "heading": 198,
       "maxSog": 18.5,
       "destination": "SE GOT              ",
       "eta": "9-16 20:30",
-      "timestamp": "2026-09-17 08:15:09.093562963 +0000 UTC"
+      "timestamp": "2026-09-17 14:00:11.583122848 +0000 UTC"
     },
     {
       "mmsi": 351446000,
@@ -86,6 +86,20 @@
       "destination": null,
       "eta": null,
       "timestamp": "2026-08-23 15:17:10.549279928 +0000 UTC"
+    },
+    {
+      "mmsi": 440114000,
+      "name": "Asian Empire",
+      "imo": 9176606,
+      "lat": 33.68208,
+      "lon": 136.45587333333333,
+      "sog": 14,
+      "cog": 34,
+      "heading": 37,
+      "maxSog": 14,
+      "destination": null,
+      "eta": null,
+      "timestamp": "2026-09-17 14:01:43.791707946 +0000 UTC"
     },
     {
       "mmsi": 440253000,
@@ -245,15 +259,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": 41.141110000000005,
-      "lon": 2.441688333333333,
-      "sog": 16.6,
-      "cog": 247.8,
-      "heading": 248,
+      "lat": 37.26320166666667,
+      "lon": -1.214665,
+      "sog": 16,
+      "cog": 243.1,
+      "heading": 242,
       "maxSog": 17.4,
       "destination": "ITCVV > ESTAR       ",
       "eta": "9-16 03:30",
-      "timestamp": "2026-09-15 23:52:27.839598534 +0000 UTC"
+      "timestamp": "2026-09-17 14:00:07.970662687 +0000 UTC"
     }
   ]
 }
