@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T07:50:56.417Z",
+  "generatedAt": "2026-09-18T12:35:24.644Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -35,15 +35,15 @@
       "mmsi": 370567000,
       "name": "Morning Linda",
       "imo": 9383106,
-      "lat": -37.818380000000005,
-      "lon": 144.917995,
+      "lat": -37.818396666666665,
+      "lon": 144.91798333333332,
       "sog": 0,
       "cog": 69.6,
       "heading": 244,
       "maxSog": 17.8,
       "destination": "AUBNE-AUMEL         ",
       "eta": "9-16 16:00",
-      "timestamp": "2026-09-18 07:50:20.992976302 +0000 UTC"
+      "timestamp": "2026-09-18 12:35:19.818926276 +0000 UTC"
     },
     {
       "mmsi": 370967000,
