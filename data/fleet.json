@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T11:36:37.700Z",
+  "generatedAt": "2026-09-21T17:34:20.553Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -259,15 +259,15 @@
       "mmsi": 636018238,
       "name": "Morning Cornet",
       "imo": 9329473,
-      "lat": 26.945833333333333,
-      "lon": -15.610581666666667,
-      "sog": 16.6,
-      "cog": 205.4,
-      "heading": 204,
+      "lat": 25.441865,
+      "lon": -16.390826666666666,
+      "sog": 16.7,
+      "cog": 205.8,
+      "heading": 205,
       "maxSog": 17.4,
-      "destination": "ITCVV > ESTAR       ",
-      "eta": "9-16 03:30",
-      "timestamp": "2026-09-21 11:35:28.943474476 +0000 UTC"
+      "destination": "ESALG > CNYTG       ",
+      "eta": "10-26 17:00",
+      "timestamp": "2026-09-21 17:32:55.895879087 +0000 UTC"
     }
   ]
 }
