@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T05:43:05.027Z",
+  "generatedAt": "2026-09-22T10:42:34.237Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -7,15 +7,15 @@
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 53.73663,
-      "lon": 5.854843333333333,
-      "sog": 16.2,
-      "cog": 251,
-      "heading": 250,
+      "lat": 52.97555166666667,
+      "lon": 4.005145,
+      "sog": 16.6,
+      "cog": 230,
+      "heading": 229,
       "maxSog": 18.5,
-      "destination": "DE BRV              ",
-      "eta": "9-19 18:00",
-      "timestamp": "2026-09-22 05:42:51.456439186 +0000 UTC"
+      "destination": "BE ZEE              ",
+      "eta": "9-22 20:00",
+      "timestamp": "2026-09-22 10:40:15.833054039 +0000 UTC"
     },
     {
       "mmsi": 351446000,
@@ -35,15 +35,15 @@
       "mmsi": 370567000,
       "name": "Morning Linda",
       "imo": 9383106,
-      "lat": -37.849426666666666,
-      "lon": 144.90910166666666,
-      "sog": 2.9,
-      "cog": 340.7,
-      "heading": 156,
+      "lat": -37.841474999999996,
+      "lon": 144.90381833333333,
+      "sog": 0,
+      "cog": 337.5,
+      "heading": 163,
       "maxSog": 17.8,
       "destination": "AUBNE-AUMEL         ",
       "eta": "9-16 16:00",
-      "timestamp": "2026-09-22 05:41:21.423460602 +0000 UTC"
+      "timestamp": "2026-09-22 10:41:23.662569485 +0000 UTC"
     },
     {
       "mmsi": 370967000,
