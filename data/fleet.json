@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T19:41:51.563Z",
+  "generatedAt": "2026-09-24T22:54:39.308Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -7,15 +7,15 @@
       "mmsi": 311000685,
       "name": "Morning Carol",
       "imo": 9336086,
-      "lat": 49.885085000000004,
-      "lon": -3.811761666666667,
+      "lat": 49.668085,
+      "lon": -4.991121666666667,
       "sog": 14.7,
-      "cog": 251.5,
-      "heading": 251,
+      "cog": 264.4,
+      "heading": 265,
       "maxSog": 18.5,
       "destination": "BE ZEE              ",
       "eta": "9-22 20:00",
-      "timestamp": "2026-09-24 19:40:25.118812727 +0000 UTC"
+      "timestamp": "2026-09-24 22:54:01.2363569 +0000 UTC"
     },
     {
       "mmsi": 351446000,
