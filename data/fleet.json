@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T20:45:03.633Z",
+  "generatedAt": "2026-10-04T23:47:14.982Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -48,14 +48,14 @@
     {
       "mmsi": 370967000,
       "name": "Morning Lisa",
-      "lat": 33.15869166666667,
-      "lon": 136.62207666666666,
-      "sog": 15.6,
-      "cog": 241.6,
-      "heading": 243,
-      "destination": "CNHUA               ",
-      "eta": "8-26 04:00",
-      "timestamp": "2026-09-13 07:51:47.869704322 +0000 UTC",
+      "lat": 47.787074999999994,
+      "lon": -127.65097166666666,
+      "sog": 0.4,
+      "cog": 79.2,
+      "heading": 36,
+      "destination": "CANWE               ",
+      "eta": "10-6 23:00",
+      "timestamp": "2026-10-04 23:45:21.067727225 +0000 UTC",
       "imo": 9383417,
       "maxSog": 17.5
     },
