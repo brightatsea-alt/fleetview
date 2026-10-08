@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T14:18:21.586Z",
+  "generatedAt": "2026-10-08T20:26:58.659Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -53,8 +53,8 @@
       "sog": 0,
       "cog": 197.3,
       "heading": 198,
-      "destination": "CANWE               ",
-      "eta": "10-6 23:00",
+      "destination": "USTIW               ",
+      "eta": "10-9 16:00",
       "timestamp": "2026-10-08 06:54:30.805305986 +0000 UTC",
       "imo": 9383417,
       "maxSog": 17.5
