@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T15:41:42.332Z",
+  "generatedAt": "2026-10-14T19:55:20.445Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -195,8 +195,8 @@
       "cog": 224.6,
       "heading": 133,
       "maxSog": 18.1,
-      "destination": "KRUSN               ",
-      "eta": "9-5 20:00",
+      "destination": "PACTB               ",
+      "eta": "10-20 01:00",
       "timestamp": "2026-10-11 18:33:02.70004683 +0000 UTC"
     },
     {
