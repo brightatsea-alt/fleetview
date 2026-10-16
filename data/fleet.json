@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T20:22:00.785Z",
+  "generatedAt": "2026-10-16T23:12:35.331Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -216,14 +216,14 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": -18.24089,
-      "lon": 1.75268,
-      "sog": 18.1,
-      "cog": 322.2,
-      "heading": 321,
+      "lat": -17.570856666666668,
+      "lon": 1.1854616666666666,
+      "sog": 17.9,
+      "cog": 320.3,
+      "heading": 322,
       "destination": "ESSDR               ",
       "eta": "7-28 10:00",
-      "timestamp": "2026-10-16 20:20:43.319734083 +0000 UTC",
+      "timestamp": "2026-10-16 23:12:31.407402099 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
     },
