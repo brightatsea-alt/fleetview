@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T21:18:34.371Z",
+  "generatedAt": "2026-10-31T01:19:44.826Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -222,7 +222,7 @@
       "cog": 22,
       "heading": 28,
       "destination": "BEANR               ",
-      "eta": "10-30 10:00",
+      "eta": "10-30 09:00",
       "timestamp": "2026-10-30 21:17:19.820680333 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
