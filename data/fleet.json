@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T11:55:48.047Z",
+  "generatedAt": "2026-11-02T21:13:16.505Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -175,15 +175,15 @@
       "mmsi": 441995000,
       "name": "Asian Trust",
       "imo": 9203590,
-      "lat": 39.480180000000004,
-      "lon": -75.56335166666666,
-      "sog": 11.3,
-      "cog": 356.1,
-      "heading": 0,
+      "lat": 39.89620333333333,
+      "lon": -75.14021833333332,
+      "sog": 0,
+      "cog": 284,
+      "heading": 280,
       "maxSog": 16.2,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-11-02 03:40:26.639498272 +0000 UTC"
+      "timestamp": "2026-11-02 21:12:24.347066955 +0000 UTC"
     },
     {
       "mmsi": 538005232,
