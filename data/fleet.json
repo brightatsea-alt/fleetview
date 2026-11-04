@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T12:44:41.064Z",
+  "generatedAt": "2026-11-04T20:13:37.850Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -221,8 +221,8 @@
       "sog": 12,
       "cog": 35,
       "heading": 35,
-      "destination": "SEWAL               ",
-      "eta": "11-3 03:00",
+      "destination": "SEGOT               ",
+      "eta": "11-4 20:00",
       "timestamp": "2026-11-03 23:49:39.097318579 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
