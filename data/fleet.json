@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T08:50:25.422Z",
+  "generatedAt": "2026-11-05T17:01:29.220Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -175,15 +175,15 @@
       "mmsi": 441995000,
       "name": "Asian Trust",
       "imo": 9203590,
-      "lat": 39.10539666666667,
-      "lon": -75.203485,
-      "sog": 18,
-      "cog": 143.7,
-      "heading": 145,
+      "lat": 44.61615,
+      "lon": -63.54725833333334,
+      "sog": 11.4,
+      "cog": 161,
+      "heading": 161,
       "maxSog": 18,
-      "destination": null,
-      "eta": null,
-      "timestamp": "2026-11-03 03:14:42.780263163 +0000 UTC"
+      "destination": "CAHAL>PACTB         ",
+      "eta": "11-12 21:00",
+      "timestamp": "2026-11-05 16:59:37.599223779 +0000 UTC"
     },
     {
       "mmsi": 538005232,
@@ -216,14 +216,14 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 57.936301666666665,
-      "lon": 11.684241666666667,
-      "sog": 12,
-      "cog": 35,
-      "heading": 35,
+      "lat": 57.602853333333336,
+      "lon": 11.642716666666667,
+      "sog": 10.1,
+      "cog": 240.2,
+      "heading": 241,
       "destination": "SEGOT               ",
       "eta": "11-4 20:00",
-      "timestamp": "2026-11-03 23:49:39.097318579 +0000 UTC",
+      "timestamp": "2026-11-05 17:01:15.012179325 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
     },
