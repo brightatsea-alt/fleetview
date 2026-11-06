@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T17:48:48.674Z",
+  "generatedAt": "2026-11-06T22:37:43.046Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -216,14 +216,14 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 57.855195,
-      "lon": 9.806401666666666,
-      "sog": 11.6,
-      "cog": 249,
-      "heading": 247,
+      "lat": 53.84938833333333,
+      "lon": 8.012341666666666,
+      "sog": 15,
+      "cog": 102,
+      "heading": 103,
       "destination": "SEGOT               ",
       "eta": "11-4 20:00",
-      "timestamp": "2026-11-05 22:37:25.581202252 +0000 UTC",
+      "timestamp": "2026-11-06 22:36:53.302676035 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
     },
@@ -231,15 +231,15 @@
       "mmsi": 538005521,
       "name": "Morning Pilot",
       "imo": 9669031,
-      "lat": 51.35028,
-      "lon": -3.2413283333333336,
-      "sog": 16,
-      "cog": 74.8,
-      "heading": 76,
+      "lat": 51.31728,
+      "lon": -4.263655,
+      "sog": 16.8,
+      "cog": 266,
+      "heading": 266,
       "maxSog": 17.8,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-11-06 03:01:00.08580053 +0000 UTC"
+      "timestamp": "2026-11-06 22:37:14.34673302 +0000 UTC"
     },
     {
       "mmsi": 538005617,
