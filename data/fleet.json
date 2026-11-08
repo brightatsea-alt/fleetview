@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T10:58:57.729Z",
+  "generatedAt": "2026-11-08T16:56:37.000Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -216,14 +216,14 @@
     {
       "mmsi": 538005452,
       "name": "Morning Post",
-      "lat": 53.84938833333333,
-      "lon": 8.012341666666666,
-      "sog": 15,
-      "cog": 102,
-      "heading": 103,
+      "lat": 53.57621833333334,
+      "lon": 8.55714,
+      "sog": 0.1,
+      "cog": 8.5,
+      "heading": 242,
       "destination": "DEBRV               ",
       "eta": "11-6 22:00",
-      "timestamp": "2026-11-06 22:36:53.302676035 +0000 UTC",
+      "timestamp": "2026-11-08 16:55:53.834275317 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
     },
