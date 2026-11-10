@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T18:05:01.285Z",
+  "generatedAt": "2026-11-10T01:51:53.158Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -237,8 +237,8 @@
       "cog": 72.1,
       "heading": 71,
       "maxSog": 18.3,
-      "destination": null,
-      "eta": null,
+      "destination": "GBBRS->BEZEE        ",
+      "eta": "11-9 21:00",
       "timestamp": "2026-11-09 07:31:00.61018884 +0000 UTC"
     },
     {
