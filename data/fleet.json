@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T17:51:34.043Z",
+  "generatedAt": "2026-11-12T23:03:51.456Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -231,15 +231,15 @@
       "mmsi": 538005521,
       "name": "Morning Pilot",
       "imo": 9669031,
-      "lat": 51.31380166666667,
-      "lon": 3.2275533333333333,
+      "lat": 51.313824999999994,
+      "lon": 3.227526666666667,
       "sog": 0.1,
-      "cog": 347,
+      "cog": 7.4,
       "heading": 333,
       "maxSog": 18.3,
       "destination": "GBBRS->BEZEE        ",
       "eta": "11-9 21:00",
-      "timestamp": "2026-11-11 18:15:19.494439421 +0000 UTC"
+      "timestamp": "2026-11-12 23:03:19.776499893 +0000 UTC"
     },
     {
       "mmsi": 538005617,
