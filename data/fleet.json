@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T18:17:14.851Z",
+  "generatedAt": "2026-11-12T01:14:38.458Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -222,7 +222,7 @@
       "cog": 174.5,
       "heading": 172,
       "destination": "BEZEE               ",
-      "eta": "11-11 21:00",
+      "eta": "11-11 23:00",
       "timestamp": "2026-11-11 18:16:03.2894767 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
