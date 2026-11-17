@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T01:22:55.962Z",
+  "generatedAt": "2026-11-17T09:58:25.247Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -209,8 +209,8 @@
       "cog": 311.8,
       "heading": 312,
       "maxSog": 17.4,
-      "destination": null,
-      "eta": null,
+      "destination": "SGSIN PEBGB         ",
+      "eta": "11-17 06:00",
       "timestamp": "2026-10-15 23:29:31.806456872 +0000 UTC"
     },
     {
@@ -265,8 +265,8 @@
       "cog": 206.7,
       "heading": 205,
       "maxSog": 17.4,
-      "destination": "ESALG > CNYTG       ",
-      "eta": "10-26 17:00",
+      "destination": "CNSHG > SGSIN-PEBGA ",
+      "eta": "11-17 07:00",
       "timestamp": "2026-09-21 21:29:57.857875819 +0000 UTC"
     }
   ]
