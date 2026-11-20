@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T17:53:45.793Z",
+  "generatedAt": "2026-11-20T00:06:27.732Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -231,15 +231,15 @@
       "mmsi": 538005521,
       "name": "Morning Pilot",
       "imo": 9669031,
-      "lat": 51.432678333333335,
-      "lon": 3.617156666666667,
-      "sog": 12.6,
-      "cog": 65.2,
-      "heading": 65,
+      "lat": 51.272396666666666,
+      "lon": 4.2204950000000006,
+      "sog": 0.1,
+      "cog": 22.8,
+      "heading": 29,
       "maxSog": 18.3,
       "destination": "SEWAL->BEANR        ",
       "eta": "11-19 15:00",
-      "timestamp": "2026-11-19 17:53:31.237273775 +0000 UTC"
+      "timestamp": "2026-11-20 00:05:17.363323774 +0000 UTC"
     },
     {
       "mmsi": 538005617,
