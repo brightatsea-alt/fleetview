@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T07:57:50.489Z",
+  "generatedAt": "2026-11-20T16:34:34.165Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -105,15 +105,15 @@
       "mmsi": 440253000,
       "name": "Morning Menad",
       "imo": 9318515,
-      "lat": 18.387005,
-      "lon": -69.93899666666667,
-      "sog": 17.1,
-      "cog": 214.3,
-      "heading": 213,
+      "lat": -37.852381666666666,
+      "lon": 144.91015333333334,
+      "sog": 2.1,
+      "cog": 322.5,
+      "heading": 319,
       "maxSog": 17.1,
       "destination": null,
       "eta": null,
-      "timestamp": "2026-09-27 21:47:09.881980442 +0000 UTC"
+      "timestamp": "2026-11-20 16:33:28.206960458 +0000 UTC"
     },
     {
       "mmsi": 441093000,
