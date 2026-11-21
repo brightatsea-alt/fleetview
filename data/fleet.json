@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T03:42:22.025Z",
+  "generatedAt": "2026-11-21T11:58:10.216Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -203,15 +203,15 @@
       "mmsi": 538005333,
       "name": "Morning Chant",
       "imo": 9663300,
-      "lat": 1.284175,
-      "lon": 103.96155999999999,
-      "sog": 0,
-      "cog": 145.8,
-      "heading": 112,
+      "lat": 1.186025,
+      "lon": 103.838245,
+      "sog": 9.2,
+      "cog": 82.9,
+      "heading": 75,
       "maxSog": 17.4,
       "destination": "SGSIN PEBGB         ",
       "eta": "11-17 06:00",
-      "timestamp": "2026-11-18 09:32:00.773823031 +0000 UTC"
+      "timestamp": "2026-11-21 11:55:47.15126684 +0000 UTC"
     },
     {
       "mmsi": 538005452,
