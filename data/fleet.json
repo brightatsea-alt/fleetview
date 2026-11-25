@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T11:57:52.038Z",
+  "generatedAt": "2026-11-25T20:56:14.811Z",
   "source": "aisstream.io",
   "count": 19,
   "vessels": [
@@ -222,7 +222,7 @@
       "cog": 6,
       "heading": 311,
       "destination": "CAHAL               ",
-      "eta": "11-23 16:00",
+      "eta": "11-24 14:45",
       "timestamp": "2026-11-25 02:54:04.772942519 +0000 UTC",
       "imo": 9669029,
       "maxSog": 18.4
